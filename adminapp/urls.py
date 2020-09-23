@@ -38,7 +38,7 @@ urlpatterns = [
          name='category_products'),
     path('category/<int:category_pk>/product/create/', adminapp.product_create,
          name='product_create'),
-    path('product/<int:product_pk>/read/', adminapp.ProductDetail.as_view(), name='product_read'),
+    path('product/<int:product_pk>/detail/', adminapp.ProductDetail.as_view(), name='product_read'),
     path('product/<int:pk>/update/', adminapp.product_update, name='product_update'),
     path('product/<int:pk>/delete/', adminapp.product_delete, name='product_delete'),
 ]

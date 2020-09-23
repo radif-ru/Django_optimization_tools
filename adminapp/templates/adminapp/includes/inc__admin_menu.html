@@ -15,10 +15,11 @@
         menu_link
         {% if request.resolver_match.url_name == 'categories_read' or category.name %}
             menu_link__active
-        {% endif %}
-">категории
+        {% endif %}">
             {% if category %}
-                : {{ category.name }}
+                категория: {{ category.name }}
+            {% else %}
+                категории
             {% endif %}
         </a>
     </li>

@@ -2,9 +2,6 @@
 {% load static %}
 {% load my_tags %}
 
-{% block menu %}
-{% endblock %}
-
 {% block container %}
     <div class="product-detail">
         <section class="product-dealis margin_bottom_0">
@@ -12,25 +9,45 @@
                 <div class="product-dealis-container-img">
                     <img src="{{ product.image|media_folder_products }}" alt="{{ product.name }}">
                 </div>
-                <div class="product-dealis-container-img-menu">
-                    <img src="{{ product.image|media_folder_products }}" alt="{{ product.name }}">
-                    <img src="{{ product.image|media_folder_products }}" alt="{{ product.name }}">
-                    <img src="{{ product.image|media_folder_products }}" alt="{{ product.name }}">
-                </div>
+{#                <div class="product-dealis-container-img-menu">#}
+{#                    <img src="{{ product.image|media_folder_products }}" alt="{{ product.name }}">#}
+{#                    <img src="{{ product.image|media_folder_products }}" alt="{{ product.name }}">#}
+{#                    <img src="{{ product.image|media_folder_products }}" alt="{{ product.name }}">#}
+{#                </div>#}
             </div>
             <div class="product-dealis-container">
-                <h3>{{ product.name|title }}</h3>
+                <h3>{{ product.category.name|title }} / {{ product.name|title }}</h3>
                 <p></p>
                 <p>&#8381; <span>{{ product.price }}</span>/коп</p>
-                <a href="{% url 'adminapp:category_products' product.category.pk %}"
-                   class="button button_width__red">
-                    Вернуться назад <img
-                        src="{% static 'img/arrow-white.svg' %}" alt="arrow"></a>
+                <a href="{% url 'adminapp:category_products' category_pk=product.category_id %}"
+                   class="btn btn-primary">
+                    Вернуться назад
+                    <img src="{% static 'img/arrow-white.svg' %}" alt="arrow">
+                </a>
+                <a href="{% url 'adminapp:product_update' pk=product.pk %}"
+                   class="btn btn-primary">
+                    Редактировать
+                    <img src="{% static 'img/arrow-white.svg' %}" alt="arrow">
+                </a>
+                <a href="{% url 'adminapp:product_delete' pk=product.pk %}"
+                   class="btn btn-primary">
+                    Удалить
+                    <img src="{% static 'img/arrow-white.svg' %}" alt="arrow">
+                </a>
+                <br>
+                {% if not product.is_active %}
+                    <span class="errorlist">(продукт не в каталоге!)</span>
+                {% else %}
+                    <span>(продукт в каталоге)</span>
+                {% endif %}
+                <br>
                 <div class="product-dealis-text">
-                    <p>Краткое описание: <br>
+                    <p><span class="font-weight-bold">Краткое описание: </span><br>
                         {{ product.short_desc|capfirst }}</p>
-                    <p>Описание: <br>
+                    <p><span class="font-weight-bold">Описание: </span><br>
                         {{ product.description|capfirst }}</p>
+                    <p><span class="font-weight-bold">Количество на складе: </span><br>
+                        {{ product.quantity|capfirst }}</p>
                 </div>
             </div>
         </section>

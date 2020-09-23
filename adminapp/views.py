@@ -37,7 +37,9 @@ class PageTitleMixin:
     def get_context_data(self, *, object_list=None, **kwargs):
         data = super().get_context_data(object_list=None, **kwargs)
         # print(data)
-        data['page_title'] = self.page_title
+        # hasattr - Проверяем содержит ли объект указанный аттрибут
+        if hasattr(self, 'page_title'):
+            data['page_title'] = self.page_title
         return data
 
 
@@ -178,7 +180,7 @@ def category_products(request, category_pk):
     object_list = category.product_set.all()
 
     context = {
-        'page_title': f'категория {category.name}/продукты',
+        'page_title': f'админка/категория {category.name}/продукты',
         'category': category,
         'object_list': object_list,
     }
@@ -207,7 +209,7 @@ def product_create(request, category_pk):
         )
 
     context = {
-        'page_title': 'продукты/создание',
+        'page_title': 'админка/продукты/создание',
         'form': form,
         'category': category
     }
@@ -231,7 +233,7 @@ def product_update(request, pk):
         form = AdminProductUpdateForm(instance=product)
 
     context = {
-        'page_title': 'продукты/редактирование',
+        'page_title': 'админка/продукты/редактирование',
         'form': form,
         'category': product.category
     }
@@ -251,14 +253,14 @@ def product_delete(request, pk):
         ))
 
     context = {
-        'page_title': 'продукты/удаление',
+        'page_title': 'админка/продукты/удаление',
         'object': obj,
     }
     return render(request, 'adminapp/product_delete.html', context)
 
 
 class ProductDetail(PageTitleMixin, DetailView):
-    page_title = 'Продукт'
+    page_title = 'админка/продукт'
     model = Product
     pk_url_kwarg = 'product_pk'
     context_object_name = 'product'
