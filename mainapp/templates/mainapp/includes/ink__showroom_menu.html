@@ -1,0 +1,26 @@
+<div class="products-header products-header_margin">
+    <ul class="products-menu">
+        <li class="products-menu_list">
+            <a href="{% url 'main:showroom_catalog' pk=0 %}"
+               class="products-menu_link products-menu__active2
+                {% if request.resolver_match.kwargs.pk == 0 or request.resolver_match.route == 'showroom/' %}
+                    products-menu_link__active
+                {% endif %}
+">
+                All
+            </a>
+        </li>
+        {% for category in categories %}
+            <li class="products-menu_list">
+                <a href="{% url 'main:showroom_catalog' pk=category.pk %}" class="products-menu_link products-menu__font
+                    {% if request.resolver_match.kwargs.pk == category.pk %}
+                        products-menu_link__active
+                    {% endif %}
+">
+                    {{ category.name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <div class="products-menu_border"></div>
+</div>

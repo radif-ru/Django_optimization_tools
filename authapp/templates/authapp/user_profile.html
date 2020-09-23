@@ -1,0 +1,18 @@
+{% extends 'authapp/base.html' %}
+
+{% block container %}
+    <div class="h2 text-center head">
+        Редактирование профиля
+    </div>
+    <form class="form-horizontal" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Сохранить" class="form-control">
+    </form>
+    <a href="{% url 'auth:change_password' %}" class='btn btn-round form-control'>
+        Изменить пароль
+    </a>
+    <a href="{% url 'main:index' %}" class='btn btn-round form-control'>
+        На главную
+    </a>
+{% endblock %}

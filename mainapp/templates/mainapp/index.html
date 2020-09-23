@@ -1,0 +1,100 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% load my_tags %}
+
+{% block container %}
+    <section class="slider padding-site clearfix">
+        {% include 'mainapp/includes/inc__main_menu.html' %}
+        <div class="slider_text">
+            <p class="slider_trending">TRENDING</p>
+            <h2 class="slider_h2">Fishnet Chair</h2>
+            <p class="slider_content">Seat and back with upholstery made of cold cure foam. Steel
+                frame, available in matt powder-coated black</p>
+            <a href="{% url 'main:products' %}" class="button">Order Us
+                <img class="arrow" src="{% static 'img/arrow.svg' %}" alt="arrow"></a>
+        </div>
+        <div class="pagination">
+            <a href="{% url 'main:products' %}" class="circle"></a>
+            <a href="{% url 'main:products' %}" class="circle circle__active"></a>
+            <a href="{% url 'main:products' %}" class="circle"></a>
+        </div>
+    </section>
+    <section class="products padding-site clearfix">
+        <div class="products_header">
+            <ul class="products-menu">
+                <li class="products-menu_list">
+                    <a href="{% url 'main:products' %}"
+                       class="products-menu_link products-menu_link__active">Featured</a>
+                </li>
+                <li class="products-menu_list">
+                    <a href="{% url 'main:products' %}"
+                       class="products-menu_link">New</a></li>
+            </ul>
+            <a href="{% url 'main:catalog' pk=0 %}" class="products-explore">explore all <img
+                    src="{% static 'img/arrow.svg' %}"
+                    alt="image"></a>
+        </div>
+        {% include 'mainapp/includes/inc__featured_new_products.html' %}
+    </section>
+    <section class="exclusive clearfix">
+        {% include 'mainapp/includes/inc__exclusive_products.html' %}
+    </section>
+    <section class="trending clearfix padding-site">
+        <div class="trending-header clearfix">
+            <h4 class="trending-h4">Trending Products</h4>
+            <a href="{% url 'main:showroom' %}" class="products-explore">explore all <img
+                    src="{% static 'img/arrow.svg' %}"
+                    alt="image"></a>
+        </div>
+        <div class="trending-products trending-products_mt">
+            {% include 'mainapp/includes/inc__trending_products.html' %}
+        </div>
+    </section>
+    <section class="slider slider_bg padding-site">
+        <div class="slider_text slider_text_pos">
+            <p class="slider_trending slider_trending__red">Hot deal</p>
+            <h2 class="slider_h2">Fishnet Chair</h2>
+            <p class="slider_content">Seat and back with upholstery made of cold cure foam. Steel
+                frame, available in matt powder-coated black</p>
+            <a href="{% url 'main:products' %}" class="button">Order Us
+                <img class="arrow" src="{% static 'img/arrow.svg' %}" alt="arrow"></a>
+        </div>
+        <div class="pagination">
+            <a href="{% url 'main:products' %}" class="circle"></a>
+            <a href="{% url 'main:products' %}" class="circle circle__active"></a>
+            <a href="{% url 'main:products' %}" class="circle"></a>
+        </div>
+    </section>
+    <section class="exclusive-2 padding-site">
+        <div class="exclusive-container exclusive-container_wh">
+            <p class="eclusive-text eclusive-text_margin">exclusive</p>
+            <h3 class="eclusive-h3">Fishnet Chair</h3>
+            <p class="exlusive-content exlusive-content_w">Seat and back with upholstery made of
+                cold cure foam. Steel frame, available in matt</p>
+            <a href="{% url 'main:products' %}" class="button">Order Us <img src="{% static 'img/arrow.svg' %}" alt="arrow"></a>
+        </div>
+        <div class="excl-products">
+            <a href="{% url 'main:products' %}"><img class="excl-prod" src="{% static 'img/product-2-sm.jpg' %}"
+                             alt="exclusive product"></a>
+            <a href="{% url 'main:products' %}"><img class="excl-prod" src="{% static 'img/product-3-sm.jpg' %}"
+                             alt="exclusive product"></a>
+            <a href="{% url 'main:products' %}"><img class="excl-prod" src="{% static 'img/product-4-sm.jpg' %}"
+                             alt="exclusive product"></a>
+            <a href="{% url 'main:products' %}"><img class="excl-prod" src="{% static 'img/product-5-sm.jpg' %}"
+                             alt="exclusive product"></a>
+        </div>
+    </section>
+    <section class="mobile-app clearfix">
+        <div class="padding-site">
+            <p class="mobile-app-titlle">
+                mobile app
+            </p>
+            <h2 class="mobile-app-h2">Find. Follow. Favorite.</h2>
+            <p class="mobile-app-content">Save your favorites and share your style.</p>
+            <a href="#" class="mobile-app-download"><img src="{% static 'img/app-store.png' %}"
+                                                         alt="image"></a>
+            <a href="#" class="mobile-app-download"><img src="{% static 'img/google-play.png' %}"
+                                                         alt="image"></a>
+        </div>
+    </section>
+{% endblock %}

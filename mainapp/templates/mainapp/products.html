@@ -1,0 +1,44 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% load my_tags %}
+
+{% block container %}
+    <section class="padding-site clearfix">
+        {% include 'mainapp/includes/inc__main_menu.html' %}
+        {% include 'mainapp/includes/inc__product_menu.html' %}
+    </section>
+    <section class="product-dealis">
+        <div class="product-dealis-container">
+            <div class="product-dealis-container-img">
+                <img src="{{ hot_product.image|media_folder_products }}" alt="{{ hot_product.name }}">
+            </div>
+            <div class="product-dealis-container-img-menu">
+                <img src="{{ hot_product.image|media_folder_products }}" alt="{{ hot_product.name }}">
+                <img src="{{ hot_product.image|media_folder_products }}" alt="{{ hot_product.name }}">
+                <img src="{{ hot_product.image|media_folder_products }}" alt="{{ hot_product.name }}">
+            </div>
+        </div>
+        <div class="product-dealis-container">
+            <h3>{{ hot_product.name|title }}</h3>
+            <p>горячее предложение</p>
+            <p>&#8381; <span>{{ hot_product.price }}</span>/коп</p>
+            <a href="{% url 'main:product_page' hot_product.pk %}" class="button button_width__red">Order
+                Us <img
+                        src="{% static 'img/arrow-white.svg' %}" alt="arrow"></a>
+            <div class="product-dealis-text">
+                <p>{{ hot_product.short_desc|capfirst }}</p>
+            </div>
+        </div>
+    </section>
+    <section class="trending clearfix padding-site">
+        <div class="trending-header clearfix">
+            <h4 class="trending-h4">Похожие Продукты</h4>
+            <a href="{% url 'main:catalog' pk=0 %}" class="products-explore">показать все
+                <img src="{% static 'img/arrow.svg' %}" alt="image">
+            </a>
+        </div>
+        <div class="trending-products trending-products_mt">
+            {% include 'mainapp/includes/inc__trending_products.html' %}
+        </div>
+    </section>
+{% endblock %}

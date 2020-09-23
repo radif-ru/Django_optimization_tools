@@ -1,0 +1,18 @@
+{% load static %}
+{% load my_tags %}
+
+<ul class="products_container">
+    {% for product in products %}
+        <li class="products_list"><a href="{% url 'main:product_page' product.pk %}" class="products_link">
+            <img src="{{ product.image|media_folder_products }}" alt="{{ product.name }}" class="products-img">
+            <div class="products_list__hov">
+                <img class="products_list__hov-img" src="{% static 'img/arrow.svg' %}"
+                     alt="{{ product.name }}">
+                <h5 class="products_list__hov-h5">{{ product.name|title }}</h5>
+                <p class="products_list__hov-p">{{ product.short_desc|capfirst }}</p>
+                <p class="products_list__hov-p">{{ product.description|capfirst }}</p>
+                <p class="products_list__hov-p">Цена: {{ product.price }} &#8381;</p>
+            </div>
+        </a></li>
+    {% endfor %}
+</ul>

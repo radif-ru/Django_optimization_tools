@@ -1,0 +1,18 @@
+{"links_menu": [
+  {
+    "href": "main:index",
+    "name": "home"
+  },
+  {
+    "href": "main:products",
+    "name": "products"
+  },
+  {
+    "href": "main:showroom",
+    "name": "showroom"
+  },
+  {
+    "href": "main:contact",
+    "name": "contact"
+  }
+]}

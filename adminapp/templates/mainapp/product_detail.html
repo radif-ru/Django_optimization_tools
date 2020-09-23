@@ -1,0 +1,38 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+{% load my_tags %}
+
+{% block menu %}
+{% endblock %}
+
+{% block container %}
+    <div class="product-detail">
+        <section class="product-dealis margin_bottom_0">
+            <div class="product-dealis-container">
+                <div class="product-dealis-container-img">
+                    <img src="{{ product.image|media_folder_products }}" alt="{{ product.name }}">
+                </div>
+                <div class="product-dealis-container-img-menu">
+                    <img src="{{ product.image|media_folder_products }}" alt="{{ product.name }}">
+                    <img src="{{ product.image|media_folder_products }}" alt="{{ product.name }}">
+                    <img src="{{ product.image|media_folder_products }}" alt="{{ product.name }}">
+                </div>
+            </div>
+            <div class="product-dealis-container">
+                <h3>{{ product.name|title }}</h3>
+                <p></p>
+                <p>&#8381; <span>{{ product.price }}</span>/коп</p>
+                <a href="{% url 'adminapp:category_products' product.category.pk %}"
+                   class="button button_width__red">
+                    Вернуться назад <img
+                        src="{% static 'img/arrow-white.svg' %}" alt="arrow"></a>
+                <div class="product-dealis-text">
+                    <p>Краткое описание: <br>
+                        {{ product.short_desc|capfirst }}</p>
+                    <p>Описание: <br>
+                        {{ product.description|capfirst }}</p>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

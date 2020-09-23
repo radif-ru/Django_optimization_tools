@@ -1,0 +1,25 @@
+<ul class="admin-menu">
+    <li class="admin-menu-list">
+        <a href="{% url 'main:index' %}" class="menu_link">на сайт</a>
+    </li>
+    <li class="admin-menu-list">
+        <a href="{% url 'my_admin:index' %}" class="
+        menu_link
+        {% if request.resolver_match.url_name == 'index' %}
+            menu_link__active
+        {% endif %}
+">пользователи</a>
+    </li>
+    <li class="admin-menu-list">
+        <a href="{% url 'my_admin:categories_read' %}" class="
+        menu_link
+        {% if request.resolver_match.url_name == 'categories_read' or category.name %}
+            menu_link__active
+        {% endif %}
+">категории
+            {% if category %}
+                : {{ category.name }}
+            {% endif %}
+        </a>
+    </li>
+</ul>

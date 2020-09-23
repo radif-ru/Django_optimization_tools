@@ -1,0 +1,17 @@
+{% load static %}
+<div class="exclusive-container">
+    <p class="eclusive-text">exclusive</p>
+    <h3 class="eclusive-h3">Fishnet Chair</h3>
+    <p class="exlusive-content">Seat and back with upholstery made of cold cure foam. Steel
+        frame, available in matt</p>
+    <a href="{% url 'main:products' %}" class="button">Order Us
+        <img src="{% static 'img/arrow.svg' %}" alt="arrow"></a>
+</div>
+<div class="exclusive-container">
+    <p class="eclusive-text">exclusive</p>
+    <h3 class="eclusive-h3">Fishnet Chair</h3>
+    <p class="exlusive-content">Seat and back with upholstery made of cold cure foam. Steel
+        frame, available in matt</p>
+    <a href="{% url 'main:products' %}" class="button">Order Us
+        <img class="arrow" src="{% static 'img/arrow.svg' %}" alt="arrow"></a>
+</div>

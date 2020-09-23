@@ -1,0 +1,6 @@
+{% load my_tags %}
+
+{% for product in products %}
+    <a class="trending-product" href="{% url 'main:product_page' product.pk %}">
+        <img src="{{ product.image|media_folder_products }}" alt="{{ product.name }}"></a>
+{% endfor %}

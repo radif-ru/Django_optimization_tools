@@ -1,0 +1,67 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+{% load my_tags %}
+
+{% block container %}
+    <div class="users-list">
+        <a href="{% url 'my_admin:user_create' %}" class="btn btn-primary new-user">
+            новый пользователь
+        </a>
+        {% for shop_user in object_list %}
+            <div class="user-record
+                {% if not shop_user.is_active %}
+                    not-active
+                {% endif %}">
+                <div>
+                    <img src="{{ shop_user.avatar|media_folder_users }}"
+                     alt="{{ shop_user.username }}">
+                </div>
+                <div class="user-role">
+                    {% if not shop_user.is_active %}
+                        не активный
+                    {% endif %}
+                    {% if shop_user.is_superuser %}
+                        администратор
+                    {% elif shop_user.is_staff %}
+                        персонал
+                    {% else %}
+                        пользователь
+                    {% endif %}
+                    <a href="{% url 'my_admin:user_update' pk=shop_user.pk %}"
+                       class="btn btn-primary">
+                        редактировать
+                    </a>
+                    {% if shop_user.is_active %}
+                        <a href="{% url 'my_admin:user_delete' pk=shop_user.pk %}"
+                           class="btn btn-primary">
+                            удалить
+                        </a>
+                    {% endif %}
+                </div>
+                <div class="user-name">
+                    <p><strong>{{ shop_user.username }}</strong></p>
+                    <p>
+                        {% if shop_user.first_name %}
+                            <b>{{ shop_user.first_name|title }}</b>
+                            {% if shop_user.last_name %}
+                                <p>{{ shop_user.last_name|title }}</p>
+                            {% endif %}
+                        {% endif %}
+                    </p>
+                </div>
+                <div class="user-age">
+                    возраст:<br>
+                    {{ shop_user.age }} лет
+                </div>
+                <div class="user-email">
+                    email:<br>
+                    {{ shop_user.email }}
+                </div>
+                <div class="user-lastlogin">
+                    заходил:<br>
+                    {{ shop_user.last_login }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

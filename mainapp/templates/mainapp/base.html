@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page_title|default:"interior"|title }}</title>
+    {% block css %}
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap"
+              rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock %}
+    <link rel="shortcut icon" href="{% static 'img/product-41.jpg' %}">
+    {% block js %}
+    {% endblock %}
+</head>
+
+<body>
+<div class="container">
+    {% block container %}
+    {% endblock %}
+
+    <footer class="footer padding-site">
+        <div class="block-1">
+            <div class="footer-info footer-info_w1">
+                <h5 class="block-title">Contact Us</h5>
+                <p class="footer-content">132A Bridge Road Richmond VIC
+                    Australia.
+                </p>
+                <p class="footer-content">Talk to us on 1300 132
+                    info@interior.com</p>
+            </div>
+            <div class="footer-info footer-info_w2">
+                <h5 class="block-title">Useful Information</h5>
+                <div class="block-usefuls-1">
+                    <a href="#" class="block-useful">Sales&nbsp;terms</a>
+                    <a href="#" class="block-useful">Customer&nbsp;care</a>
+                    <a href="#" class="block-useful">Delivery</a></div>
+                <div class="block-usefuls-2">
+                    <a href="#" class="block-useful">Architect&nbsp;accounts</a>
+                    <a href="#" class="block-useful">Careers</a>
+                    <a href="#" class="block-useful">Exchanges&nbsp;&&nbsp;return</a></div>
+            </div>
+            <div class="footer-info footer-info_w3">
+                <h5 class="block-title">Let’s Stay in Touch!</h5>
+                <p class="footer-content">Suscribe to know about our latest news, products and
+                    special
+                    offers just for suscribers.</p>
+                <form action="#" class="email-form">
+                    <input type="email" class="email-input" placeholder="your email address">
+                    <submit class="submit-input"><span class="icon-paper-plane"></span></submit>
+                </form>
+            </div>
+
+        </div>
+        <div class="block-2">
+            <p class="block-2-p">© Copyright - INTERIOR {% now "Y" %}. All Rights Reserved.</p>
+            <p class="block-2-fonts"><span class="icon-facebook-with-circle"></span><span
+                    class="icon-twitter-with-circle"></span><span
+                    class="icon-google-with-circle"></span><span
+                    class="icon-pinterest-with-circle"></span></p>
+            <p class="block-2-p">Terms & Conditions / Privacy policy & Cookies</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

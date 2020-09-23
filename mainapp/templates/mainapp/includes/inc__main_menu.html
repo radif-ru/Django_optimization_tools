@@ -1,0 +1,59 @@
+{% load static %}
+<header class="header">
+    <a href="{% url 'main:index' %}"><img class="logo" src="{% static 'img/logo.svg' %}" alt="logo"></a>
+    <ul class="menu clearfix">
+        {% for link in links_menu.links_menu %}
+            <li class="menu_list">
+                <a href="{% url link.href %}"
+                   class="
+                   menu_link
+                   {% if 'main:'|add:request.resolver_match.url_name == link.href or request.resolver_match.url_name == 'catalog' and link.name == 'products' or request.resolver_match.url_name == 'showroom_catalog' and link.name == 'showroom' or request.resolver_match.url_name == 'product_page' and link.name == 'products' %}
+                   menu_link__active
+                   {% endif %}
+">
+                    {{ link.name|upper }}
+                </a>
+            </li>
+        {% endfor %}
+        {% if user.is_superuser %}
+        <li class="menu_list">
+            <a href="{% url 'my_admin:index' %}" class="menu_link forms-menu">
+                админка
+            </a>
+            <a href="{% url 'auth:logout' %}" class="menu_link forms-menu">
+                выход
+            </a>
+        </li>
+        {% endif %}
+        {% if user.is_authenticated %}
+            <li class="menu_list">
+                <a href="{% url 'auth:user_profile' %}" class="menu_link forms-menu">
+                    {{ user.first_name|default:'Пользователь' }}
+                </a>
+                <a href="{% url 'auth:logout' %}" class="menu_link forms-menu">
+                    выход
+                </a>
+            </li>
+        {% else %}
+            <li class="menu_list">
+                <a href="{% url 'auth:user_register' %}" class="menu_link forms-menu">
+                    регистрация
+                </a>
+                <a href="{% url 'auth:login' %}" class="menu_link forms-menu">
+                    вход
+                </a>
+            </li>
+        {% endif %}
+        {% if user.is_authenticated %}
+            <li class="menu_list">
+                <a href="{% url 'basket:index' %}" class="menu_link forms-menu basket">
+                    <span class="icon-basket"></span>
+                    <span class="basket-items">{{ user.basket_cost|floatformat:0 }} &#8381; ({{ user.basket_total_quantity }} шт)</span>
+                </a>
+            </li>
+        {% endif %}
+        <li class="menu_list">
+            <a href="{% url 'main:products' %}" class="menu_link"><img src="{% static 'img/search.svg' %}" alt="img"></a>
+        </li>
+    </ul>
+</header>

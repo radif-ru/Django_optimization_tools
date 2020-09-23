@@ -1,0 +1,37 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block container %}
+    <section class="padding-site our-products clearfix">
+        {% include 'mainapp/includes/inc__main_menu.html' %}
+        <p class="our-products-text">Our Products Range</p>
+    </section>
+    <section class="trending clearfix padding-site">
+        {% include 'mainapp/includes/ink__showroom_menu.html' %}
+        <div class="paginator">
+            {% if products.has_previous %}
+                <a href="{% url 'mainapp:showroom_catalog_page' pk=category.pk page=products.previous_page_number %}">
+                    <
+                </a>
+            {% endif %}
+            {% if products.paginator.num_pages > 1 %}
+                <span class="current">страница {{ products.number }} из {{ products.paginator.num_pages }}</span>
+            {% endif %}
+            {% if products.has_next %}
+                <a href="{% url 'mainapp:showroom_catalog_page' pk=category.pk page=products.next_page_number %}">
+                    >
+                </a>
+            {% endif %}
+            <br>
+            <br>
+        </div>
+
+        <div class="trending-products">
+            {% include 'mainapp/includes/inc__trending_products.html' %}
+        </div>
+        <a class="trending-products_icon-loop2" href="#"><span class="icon-loop2"></span></a>
+    </section>
+    <section class="exclusive clearfix exclusive_margin">
+        {% include 'mainapp/includes/inc__exclusive_products.html' %}
+    </section>
+{% endblock %}

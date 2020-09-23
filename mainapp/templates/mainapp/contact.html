@@ -1,0 +1,27 @@
+{% extends 'mainapp/base.html' %}
+
+{% block container %}
+    <section class="padding-site our-products clearfix">
+        {% include 'mainapp/includes/inc__main_menu.html' %}
+        <p class="our-products-text">Contact Us</p>
+    </section>
+    <section class="interior-contact padding-site">
+
+        {% if locations %}
+            {% for location in locations.locations %}
+                <div class="contact"><a href="#">
+                    <span class="icon-location contact__location-font"></span>
+                    <h4>{{ location.city }}</h4>
+                    <p>Phone:</p>
+                    <p>{{ location.phone }}</p>
+                    <p>Email:</p>
+                    <p>{{ location.email }}</p>
+                    <p>Address:</p>
+                    <p>{{ location.address }}</p>
+                </a></div>
+            {% endfor %}
+        {% else %}
+            <h3>No data...</h3>
+        {% endif %}
+    </section>
+{% endblock %}

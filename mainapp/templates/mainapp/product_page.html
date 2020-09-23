@@ -1,0 +1,36 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% load my_tags %}
+
+{% block container %}
+    <section class="padding-site clearfix">
+        {% include 'mainapp/includes/inc__main_menu.html' %}
+        {% include 'mainapp/includes/inc__product_menu.html' %}
+    </section>
+    <section class="product-dealis margin_bottom_0">
+        <div class="product-dealis-container">
+            <div class="product-dealis-container-img">
+                <img src="{{ product.image|media_folder_products }}" alt="{{ product.name }}">
+            </div>
+            <div class="product-dealis-container-img-menu">
+                <img src="{{ product.image|media_folder_products }}" alt="{{ product.name }}">
+                <img src="{{ product.image|media_folder_products }}" alt="{{ product.name }}">
+                <img src="{{ product.image|media_folder_products }}" alt="{{ product.name }}">
+            </div>
+        </div>
+        <div class="product-dealis-container">
+            <h3>{{ product.name|title }}</h3>
+            <p></p>
+            <p>&#8381; <span>{{ product.price }}</span>/коп</p>
+            <a href="{% url 'basket:add' product.pk %}" class="button button_width__red">
+                Заказать <img
+                        src="{% static 'img/arrow-white.svg' %}" alt="arrow"></a>
+            <div class="product-dealis-text">
+                <p>Краткое описание: <br>
+                    {{ product.short_desc|capfirst }}</p>
+                <p>Описание: <br>
+                    {{ product.description|capfirst }}</p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

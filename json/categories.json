@@ -1,0 +1,22 @@
+[
+  {
+    "name": "home",
+    "description": "дом"
+  },
+  {
+    "name": "office",
+    "description": "офис"
+  },
+  {
+    "name": "furniture",
+    "description": "мебель"
+  },
+  {
+    "name": "modern",
+    "description": "современный"
+  },
+  {
+    "name": "classic",
+    "description": "классический"
+  }
+]

@@ -1,0 +1,55 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+{% load my_tags %}
+
+{% block container %}
+    <div class="categories_list">
+        <a href="{% url 'my_admin:product_create' category_pk=category.pk %}"
+           class="btn btn-primary new-category">
+            новый продукт
+        </a>
+        {% for object in object_list %}
+            <div class="category-record {% if not object.is_active %}not-active{% endif %}">
+                <div>
+                    <img src="{{ object.image|media_folder_products }}"
+                     alt="{{ object.name }}">
+                </div>
+                <div class="category-name">
+                    {{ object.name|title }}
+                </div>
+                <div class="category-actions">
+                    <a href="{% url 'my_admin:product_read' object.pk %}"
+                       class="btn btn-info">
+                        подробнее
+                    </a>
+                    <a href="{% url 'my_admin:product_update' object.pk %}"
+                       class="btn btn-success">
+                        редактировать
+                    </a>
+                    {% if object.is_active %}
+                        <a href="{% url 'my_admin:product_delete' object.pk %}"
+                           class="btn btn-danger">
+                            удалить
+                        </a>
+                    {% endif %}
+                </div>
+                <div class="summary">
+                    <b>цена</b>
+                    <p>{{ object.price }} &#8381;</p>
+                    <b>количество</b>
+                    <p>{{ object.quantity }}</p>
+                </div>
+                <div class="category-desc">
+                    {{ object.short_desc|capfirst }}
+                </div>
+                <div class="product-description">
+                    {{ object.description|capfirst }}
+                </div>
+                <div class="modified_date">
+                    дата изменения:<br>
+                    {{ object.modified_date }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

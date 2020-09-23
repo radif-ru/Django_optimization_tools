@@ -1,0 +1,121 @@
+[
+  {
+    "model": "mainapp.productcategory",
+    "pk": 1,
+    "fields": {
+      "name": "chairs",
+      "description": "\u0441\u0442\u0443\u043b\u044c\u044f",
+      "modified_date": "2020-08-27T07:47:44.586Z"
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 2,
+    "fields": {
+      "name": "tables",
+      "description": "\u0441\u0442\u043e\u043b\u044b",
+      "modified_date": "2020-08-27T07:47:44.586Z"
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 3,
+    "fields": {
+      "name": "commodes",
+      "description": "\u043a\u043e\u043c\u043e\u0434\u044b",
+      "modified_date": "2020-08-27T08:47:47.131Z"
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 4,
+    "fields": {
+      "name": "wardrobes",
+      "description": "\u0448\u043a\u0430\u0444\u044b",
+      "modified_date": "2020-08-27T08:48:07.232Z"
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 5,
+    "fields": {
+      "name": "sofas",
+      "description": "\u0434\u0438\u0432\u0430\u043d\u044b",
+      "modified_date": "2020-08-27T08:47:34.449Z"
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 8,
+    "fields": {
+      "name": "kitchens",
+      "description": "\u0432\u0435\u043b\u0438\u043a\u043e\u043b\u0435\u043f\u043d\u044b\u0435 \u043a\u0443\u0445\u043d\u0438",
+      "modified_date": "2020-08-27T10:47:34.946Z"
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 11,
+    "fields": {
+      "name": "kitchens",
+      "description": "\u0432\u0435\u043b\u0438\u043a\u043e\u043b\u0435\u043f\u043d\u044b\u0435 \u043a\u0443\u0445\u043d\u0438",
+      "modified_date": "2020-08-27T11:21:36.810Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "office chair",
+      "image": "products_images/product-4.jpg",
+      "short_desc": "\u0437\u0430\u0447\u0451\u0442\u043d\u044b\u0439",
+      "description": "\u043e\u0444\u0438\u0441\u043d\u044b\u0439 \u0441\u0442\u0443\u043b",
+      "price": "949.99",
+      "quantity": 1,
+      "modified_date": "2020-08-27T08:46:33.389Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 2,
+    "fields": {
+      "category": 4,
+      "name": "office wardrobes",
+      "image": "",
+      "short_desc": "\u0442\u0430\u043a \u0441\u0435\u0431\u0435",
+      "description": "\u043e\u0444\u0438\u0441\u043d\u044b\u0439 \u0448\u043a\u0430\u0444",
+      "price": "27000.00",
+      "quantity": 0,
+      "modified_date": "2020-08-27T08:44:37.877Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 3,
+    "fields": {
+      "category": 5,
+      "name": "office sofa",
+      "image": "products_images/product-3-sm.jpg",
+      "short_desc": "\u0445\u043e\u0440\u043e\u0448\u0438\u0439",
+      "description": "\u043e\u0444\u0438\u0441\u043d\u044b\u0439 \u0434\u0438\u0432\u0430\u043d",
+      "price": "999999.00",
+      "quantity": 3,
+      "modified_date": "2020-08-27T08:43:32.249Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 5,
+    "fields": {
+      "category": 8,
+      "name": "mortar and pestle",
+      "image": "",
+      "short_desc": "\u0441\u0442\u0443\u043f\u043a\u0430 \u0438 \u043f\u0435\u0441\u0442\u0438\u043a",
+      "description": "\u0432\u044b\u0441\u043e\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+      "price": "1550.00",
+      "quantity": 30,
+      "modified_date": "2020-08-27T11:22:16.397Z"
+    }
+  }
+]

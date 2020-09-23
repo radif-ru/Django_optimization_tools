@@ -1,0 +1,34 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block container %}
+    <section class="padding-site clearfix">
+        {% include 'mainapp/includes/inc__main_menu.html' %}
+        {% include 'mainapp/includes/inc__product_menu.html' %}
+    </section>
+    <section class="products padding-site clearfix">
+        <h2>Продукты в категории {{ category.name|capfirst }}</h2>
+        <h3>({% if category.pk == 0 %}
+            Все
+        {% else %}
+            {{ category.description|capfirst }}
+        {% endif %})</h3>
+        <div class="paginator">
+            <br>
+            {% if products.has_previous %}
+                <a href="{% url 'mainapp:catalog_page' pk=category.pk page=products.previous_page_number %}">
+                    <
+                </a>
+            {% endif %}
+            {% if products.paginator.num_pages > 1 %}
+                <span class="current">страница {{ products.number }} из {{ products.paginator.num_pages }}</span>
+            {% endif %}
+            {% if products.has_next %}
+                <a href="{% url 'mainapp:catalog_page' pk=category.pk page=products.next_page_number %}">
+                    >
+                </a>
+            {% endif %}
+        </div>
+        {% include 'mainapp/includes/inc__featured_new_products.html' %}
+    </section>
+{% endblock %}

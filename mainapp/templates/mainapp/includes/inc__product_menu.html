@@ -1,0 +1,24 @@
+<div class="dealis-links-container clearfix">
+    <ul class="dealis-links">
+        <li class="dealis-links-li">
+            <a href="{% url 'main:catalog' pk=0 %}" class="dealis-links-a
+                {% if request.resolver_match.kwargs.pk == 0 %}
+                product_menu_link__active
+                {% endif %}
+">
+                all
+            </a>
+        </li>
+        {% for category in categories %}
+            <li class="dealis-links-li">
+                <a href="{% url 'main:catalog' pk=category.pk %}" class="dealis-links-a
+                    {% if request.resolver_match.kwargs.pk == category.pk %}
+                    product_menu_link__active
+                    {% endif %}
+">
+                    {{ category.name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

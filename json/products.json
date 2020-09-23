@@ -1,0 +1,92 @@
+[
+  {
+    "category": "modern",
+    "name": "table lamp",
+    "image": "products_images/product-1.jpg",
+    "short_desc": "настольная лампа",
+    "description": "немного странная, но светит хорошо",
+    "price": "564.29",
+    "quantity": 5
+  },
+  {
+    "category": "home",
+    "name": "armchair",
+    "image": "products_images/product-2.jpg",
+    "short_desc": "кресло",
+    "description": "синего цвета, очень удобное",
+    "price": "9562.15",
+    "quantity": 11
+  },
+  {
+    "category": "classic",
+    "name": "vase",
+    "image": "products_images/product-3.jpg",
+    "short_desc": "ваза",
+    "description": "то ли ваза, то ли чайник",
+    "price": "622.27",
+    "quantity": 3
+  },
+  {
+    "category": "furniture",
+    "name": "fishnet chair",
+    "image": "products_images/product-4.jpg",
+    "short_desc": "ажурный стул",
+    "description": "вполне сносный",
+    "price": "2455",
+    "quantity": 4
+  },
+  {
+    "category": "furniture",
+    "name": "office chair",
+    "image": "products_images/product-21.jpg",
+    "short_desc": "офисный стул",
+    "description": "зачётный",
+    "price": "949.99",
+    "quantity": 25
+  },
+  {
+    "category": "home",
+    "name": "mortar and pestle",
+    "image": "products_images/product-5.jpg",
+    "short_desc": "ступка и пестик",
+    "description": "высокое качество",
+    "price": "1550.44",
+    "quantity": 2
+  },
+  {
+    "category": "modern",
+    "name": "wall-mounted cartridge",
+    "image": "products_images/product-6.jpg",
+    "short_desc": "настенный патрон",
+    "description": "довольно неплох",
+    "price": "550.62",
+    "quantity": 50
+  },
+  {
+    "category": "modern",
+    "name": "chandelier",
+    "image": "products_images/product-11.jpg",
+    "short_desc": "люстра",
+    "description": "высокое качество",
+    "price": "3550.12",
+    "quantity": 18
+  },
+  {
+    "category": "office",
+    "name": "floor lamp",
+    "image": "products_images/product-31.jpg",
+    "short_desc": "торшер",
+    "description": "так себе",
+    "price": "10.20",
+    "quantity": 12
+  },
+  {
+    "category": "classic",
+    "name": "wall lamp",
+    "image": "products_images/product-41.jpg",
+    "short_desc": "бра",
+    "description": "необычный",
+    "price": "5.10",
+    "quantity": 11
+  }
+]
