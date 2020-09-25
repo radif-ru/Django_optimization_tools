@@ -2,7 +2,7 @@
 {% load my_tags %}
 
 <ul class="products_container">
-    {% for product in products %}
+    {% for product in featured_new_products %}
         <li class="products_list"><a href="{% url 'main:product_page' product.pk %}" class="products_link">
             <img src="{{ product.image|media_folder_products }}" alt="{{ product.name }}" class="products-img">
             <div class="products_list__hov">
