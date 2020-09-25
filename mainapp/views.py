@@ -17,10 +17,6 @@ with open(os.path.join(BASE_DIR, f'{JSON_PATH}/contact_locations.json'),
     LOCATIONS = json.loads(f.read())
 
 
-def get_categories():
-    return ProductCategory.objects.filter(is_active=True)
-
-
 def get_products():
     return Product.objects.filter(is_active=True, category__is_active=True)
 
@@ -58,7 +54,6 @@ def products(request):
     context = {
         'page_title': 'Products',
         'links_menu': LINKS_MENU,
-        'categories': get_categories(),
         'products': _related_products,
         'hot_product': hot_product,
     }
@@ -69,7 +64,6 @@ def product_page(request, pk):
     context = {
         'page_title': 'продукт',
         'links_menu': LINKS_MENU,
-        'categories': get_categories(),
         'product': get_object_or_404(Product, pk=pk),
     }
     return render(request, 'mainapp/product_page.html', context)
@@ -94,7 +88,6 @@ def showroom(request, pk=0, page=1):
     context = {
         'page_title': 'Showroom',
         'links_menu': LINKS_MENU,
-        'categories': get_categories(),
         'products': all_products,
         'category': category,
     }
@@ -132,7 +125,6 @@ def catalog(request, pk, page=1):
     context = {
         'page_title': 'Catalog',
         'links_menu': LINKS_MENU,
-        'categories': get_categories(),
         'category': category,
         'products': all_products,
     }

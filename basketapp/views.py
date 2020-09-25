@@ -7,7 +7,7 @@ from django.urls import reverse
 from authapp.models import ShopUser
 from basketapp.models import BasketItem
 from mainapp.models import Product
-from mainapp.views import LINKS_MENU, get_categories
+from mainapp.views import LINKS_MENU
 
 
 @login_required
