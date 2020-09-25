@@ -126,6 +126,6 @@ def catalog(request, pk, page=1):
         'page_title': 'Catalog',
         'links_menu': LINKS_MENU,
         'category': category,
-        'products': all_products,
+        'featured_new_products': all_products,
     }
     return render(request, 'mainapp/catalog.html', context)
