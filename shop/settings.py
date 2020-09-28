@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -25,15 +24,14 @@ SECRET_KEY = 'w=asr$9a21u%tj3!vuug9m7$6(r6prs+aiwxl6*i_9c%ei44pq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pro-gidroizolyaciya.ru',
-                 'www.pro-gidroizolyaciya.ru',
+ALLOWED_HOSTS = ['[2a00:b700:2::9:1da]',
+                 '2a00:b700:2::9:1da',
                  '127.0.0.1',
                  'localhost',
-                 '2.56.241.192',
-                 '2.56.240.1',
-                 '[2a00:b700:2::9:1da]',
-                 '2a00:b700:2::9:1da',
-                 '2a00:b700:2::1']
+                 # '2.56.241.192',
+                 # 'pro-gidroizolyaciya.ru',
+                 # 'www.pro-gidroizolyaciya.ru',
+                 ]
 
 # Application definition
 
@@ -81,7 +79,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'shop.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
@@ -91,7 +88,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -111,7 +107,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -124,7 +119,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
