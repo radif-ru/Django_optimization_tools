@@ -9,5 +9,5 @@
 **/.sass-cache
 **/__pycache__
 
-# virtualenv in vps
-shopenv/
+# virtualenv in vps. .gitignore внутри shopenv
+#shopenv/
