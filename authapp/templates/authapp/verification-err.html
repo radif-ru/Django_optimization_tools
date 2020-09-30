@@ -1,0 +1,12 @@
+{% extends 'authapp/base.html' %}
+{% load static %}
+
+{% block container %}
+    <h3>Ссылка не действительна или устарела!</h3>
+    <br>
+    <a href="{% url 'main:index' %}"
+       class="btn btn-round form-control">
+        На главную
+    </a>
+
+{% endblock %}

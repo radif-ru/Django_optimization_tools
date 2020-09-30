@@ -1,3 +1,6 @@
+import hashlib
+import random
+
 import django.forms as forms
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm, \
     PasswordChangeForm
@@ -35,7 +38,7 @@ class ShopUserAuthenticationForm(AuthenticationForm):
             self.redirect_url = forms.HiddenInput()\
                 .render(name='redirect_url', value=self.data['next'])
 
-        print(self.fields.items())
+        # print(self.fields.items())
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = f'form-control {field_name}'
 
@@ -69,6 +72,16 @@ class ShopUserRegisterForm(UserCreationForm, CleanAgeMixin):
                 field.widget.attrs['placeholder'] = 'введите Ваш возраст'
                 field.help_text = '* обязательное поле'
                 field.label += '*'
+
+    def save(self, commit=True):
+        user = super().save(commit)
+
+        user.is_active = False
+        salt = hashlib.sha1(str(random.random()).encode('utf8')).hexdigest()[:6]
+        user.activation_key = hashlib.sha1((user.email + salt).encode('utf8')).hexdigest()
+        user.save()
+
+        return user
 
 
 class ShopUserProfileForm(UserChangeForm, CleanAgeMixin):

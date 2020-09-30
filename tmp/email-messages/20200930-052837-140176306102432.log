@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IGplbnlhMg==?=
+From: django@geekshop.local
+To: evgeniy2@gmail.com
+Date: Wed, 30 Sep 2020 02:28:37 -0000
+Message-ID: <160143291775.22034.1810862584609290927@radif-VirtualBox>
+
+Для подтверждения учетной записи jenya2 на портале http://localhost:8000 перейдите по ссылке: 
+http://localhost:8000/auth/user/verify/evgeniy2@gmail.com/c5b0ceda0fe08afbd012dbd533c87bcf10c5cffe/
+-------------------------------------------------------------------------------

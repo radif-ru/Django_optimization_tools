@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IGdlbg==?=
+From: django@geekshop.local
+To: gen@gena.gen
+Date: Wed, 30 Sep 2020 01:35:41 -0000
+Message-ID: <160142974161.20904.13427940524398777356@radif-VirtualBox>
+
+Для подтверждения учетной записи gen на портале http://localhost:8000 перейдите по ссылке: 
+http://localhost:8000/auth/user/verify/gen@gena.gen/03498753eb72d0c19a1fdcdbf6c4c9d52dbb2940/
+-------------------------------------------------------------------------------

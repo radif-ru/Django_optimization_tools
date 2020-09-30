@@ -6,9 +6,15 @@ from django.urls import reverse
 
 from authapp.forms import ShopUserAuthenticationForm, ShopUserRegisterForm, ShopUserProfileForm, \
     ShopUserPasswordEditForm
+from authapp.models import ShopUser
 
 
 def login(request):
+    # предыдущая страница, с которой совершён переход
+    # реализовано в шаблоне для выяснения открылся ли логин со страницы регистрации
+    # print(request.META)
+    # print('register' in request.META.get('HTTP_REFERER'))
+
     # для возврата на страницу покупки, после логина при покупке товара
     # redirect_url = request.GET['next'] if 'next' in request.GET.keys() else ''
     # или так:
@@ -18,6 +24,8 @@ def login(request):
     if request.method == 'POST':
         # print('data:', request.POST)  # смотрим что приходит в POST
         form = ShopUserAuthenticationForm(data=request.POST)
+        print(form)
+        print(form.is_valid())
         if form.is_valid():  # errors dict
             username = request.POST['username']
             password = request.POST['password']
@@ -50,15 +58,18 @@ def user_register(request):
     if request.method == 'POST':
         register_form = ShopUserRegisterForm(request.POST, request.FILES)
         if register_form.is_valid():
-            register_form.save()
+            user = register_form.save()
+            user.send_verify_mail()
 
             # сразу авторизуем нового пользователя и отправляем на главную страницу
-            username = request.POST['username']
-            password = request.POST['password1']
-            new_user = auth.authenticate(username=username, password=password)
-            if new_user and new_user.is_active:
-                auth.login(request, new_user)
-                return HttpResponseRedirect(reverse('main:index'))
+            # username = request.POST['username']
+            # password = request.POST['password1']
+            # new_user = auth.authenticate(username=username, password=password)
+            # if new_user and new_user.is_active:
+            #     auth.login(request, new_user)
+            #     return HttpResponseRedirect(reverse('main:index'))
+            # return HttpResponseRedirect(reverse('auth:login'))
+            return render(request, 'authapp/user_register_send.html')
     else:
         register_form = ShopUserRegisterForm()
     context = {
@@ -110,3 +121,19 @@ def change_password(request):
     }
 
     return render(request, 'authapp/change_password.html', context)
+
+
+def user_verify(request, email, activation_key):
+    try:
+        user = ShopUser.objects.get(email=email)
+        if user.activation_key == activation_key and not user.is_activation_key_expired() and not user.is_active:
+            user.is_active = True
+            user.save()
+            auth.login(request, user)
+        else:
+            print(f'error activation user: {user}')
+            return render(request, 'authapp/verification-err.html')
+        return render(request, 'authapp/verification.html')
+    except Exception as e:
+        print(f'error activation user : {e.args}')
+        return HttpResponseRedirect(reverse('main:index'))

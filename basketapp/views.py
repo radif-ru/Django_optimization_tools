@@ -26,7 +26,7 @@ def index(request):
 
 @login_required
 def add(request, pk):
-    print(request.META)
+    # print(request.META)
     # для возврата на страницу покупки, после логина при покупке товара
     if 'login' in request.META.get('HTTP_REFERER'):
         return HttpResponseRedirect(reverse('mainapp:product_page', args=[pk]))

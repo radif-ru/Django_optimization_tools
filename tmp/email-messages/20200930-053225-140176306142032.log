@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IGtvbHlhMg==?=
+From: django@geekshop.local
+To: ddd@dd.com
+Date: Wed, 30 Sep 2020 02:32:25 -0000
+Message-ID: <160143314568.22034.2212251694648226890@radif-VirtualBox>
+
+Для подтверждения учетной записи kolya2 на портале http://localhost:8000 перейдите по ссылке: 
+http://localhost:8000/auth/user/verify/ddd@dd.com/f44a82258cd254554f6e360c5cd3a2458fafb1b4/
+-------------------------------------------------------------------------------

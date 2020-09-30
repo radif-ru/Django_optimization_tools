@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IHZhc3lh?=
+From: django@geekshop.local
+To: vasya@vava.com
+Date: Wed, 30 Sep 2020 01:48:40 -0000
+Message-ID: <160143052068.21275.4056082286526387444@radif-VirtualBox>
+
+Для подтверждения учетной записи vasya на портале http://localhost:8000 перейдите по ссылке: 
+http://localhost:8000/auth/user/verify/vasya@vava.com/ae47944becb30179c6c8d73a5c54b25fc1480a6e/
+-------------------------------------------------------------------------------
