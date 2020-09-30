@@ -31,8 +31,8 @@ ALLOWED_HOSTS = ['[2a00:b700:2::9:1da]',
                  '127.0.0.1',
                  'localhost',
                  '2.56.241.192',
-                 # 'pro-gidroizolyaciya.ru',
-                 # 'www.pro-gidroizolyaciya.ru',
+                 'radif.ru',
+                 'django.radif.ru',
                  ]
 
 # Application definition
