@@ -137,7 +137,7 @@ JSON_PATH = 'json'
 LOGIN_URL = '/auth/login/'
 
 # Настройки почты:
-DOMAIN_NAME = 'https://radif.ru'
+DOMAIN_NAME = 'https://django.radif.ru'
 
 USER_EXPIRES_TIMEDELTA = timedelta(hours=48)
 
