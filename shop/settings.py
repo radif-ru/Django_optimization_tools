@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 from datetime import timedelta
-
+from shop.local_settings import LOC_EMAIL_HOST_PASSWORD, LOC_EMAIL_HOST_USER, LOC_EMAIL_HOST, LOC_EMAIL_PORT
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'w=asr$9a21u%tj3!vuug9m7$6(r6prs+aiwxl6*i_9c%ei44pq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1',
                  'localhost',
@@ -137,21 +137,36 @@ JSON_PATH = 'json'
 LOGIN_URL = '/auth/login/'
 
 # Настройки почты:
-DOMAIN_NAME = 'http://localhost:8000'
+DOMAIN_NAME = 'https://radif.ru'
 
 USER_EXPIRES_TIMEDELTA = timedelta(hours=48)
 
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = '25'
-EMAIL_HOST_USER = 'django@geekshop.local'
-EMAIL_HOST_PASSWORD = 'geekshop'
-EMAIL_USE_SSL = False
-# Для работы с реального хоста
-# EMAIL_USE_TLS = True
+EMAIL_HOST = LOC_EMAIL_HOST
+EMAIL_PORT = LOC_EMAIL_PORT
+EMAIL_HOST_USER = LOC_EMAIL_HOST_USER  # i@radif.ru'
+EMAIL_HOST_PASSWORD = LOC_EMAIL_HOST_PASSWORD
+EMAIL_USE_SSL = True
 
-# вариант sudo python3 -m smtpd -n -c DebuggingServer localhost:25
-# EMAIL_HOST_USER, EMAIL_HOST_PASSWORD = None, None
+SERVER_EMAIL = EMAIL_HOST_USER
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-# вариант логирования сообщений почты в виде файлов вместо отправки
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = 'tmp/email-messages/'
+
+# # Настройки почты для тестирования:
+# DOMAIN_NAME = 'http://localhost:8000'
+#
+# USER_EXPIRES_TIMEDELTA = timedelta(hours=48)
+#
+# EMAIL_HOST = 'localhost'
+# EMAIL_PORT = '25'
+# EMAIL_HOST_USER = 'django@geekshop.local'
+# EMAIL_HOST_PASSWORD = 'geekshop'
+# EMAIL_USE_SSL = False
+# # Для работы с реального хоста
+# # EMAIL_USE_TLS = True
+#
+# # вариант sudo python3 -m smtpd -n -c DebuggingServer localhost:25
+# # EMAIL_HOST_USER, EMAIL_HOST_PASSWORD = None, None
+#
+# # вариант логирования сообщений почты в виде файлов вместо отправки
+# EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+# EMAIL_FILE_PATH = 'tmp/email-messages/'

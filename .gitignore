@@ -1,5 +1,5 @@
 # IntellijIdea files
-.idea
+**/.idea
 
 # Нод модули во всех каталогах
 **/node_modules
@@ -12,3 +12,6 @@
 
 # virtualenv in vps. .gitignore внутри shopenv
 #shopenv/
+
+# локальные файлы
+**/local_*
