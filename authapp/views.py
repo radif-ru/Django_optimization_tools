@@ -6,8 +6,8 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 
-from authapp.forms import ShopUserAuthenticationForm, ShopUserRegisterForm, ShopUserProfileForm, \
-    ShopUserPasswordEditForm
+from authapp.forms import ShopUserAuthenticationForm, ShopUserRegisterForm, ShopUserUpdateForm, \
+    ShopUserPasswordEditForm, ShopUserProfileUpdateForm
 from authapp.models import ShopUser, ShopUserProfile
 
 
@@ -86,15 +86,23 @@ def user_profile(request):
     if request.method == 'POST':
         # instance подтягивает данные, вместо создания нового объекта
         # request.user - текущий залогиненый пользователь
-        profile_form = ShopUserProfileForm(request.POST, request.FILES, instance=request.user)
-        if profile_form.is_valid():
+        profile_form = ShopUserUpdateForm(request.POST, request.FILES, instance=request.user)
+        user_profile = ShopUserProfileUpdateForm(request.POST, request.FILES,
+            instance=request.user.shopuserprofile
+        )
+        if profile_form.is_valid() and user_profile.is_valid():
             profile_form.save()
+            # user_profile.save()
             return HttpResponseRedirect(reverse('main:index'))
     else:
-        profile_form = ShopUserProfileForm(instance=request.user)
+        profile_form = ShopUserUpdateForm(instance=request.user)
+        user_profile = ShopUserProfileUpdateForm(
+            instance=request.user.shopuserprofile
+        )
     context = {
         'page_title': 'профиль',
         'form': profile_form,
+        'user_profile_form': user_profile,
     }
 
     return render(request, 'authapp/user_profile.html', context)
@@ -145,8 +153,8 @@ def user_verify(request, email, activation_key):
 @receiver(post_save, sender=ShopUser)
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
-        print('ShopUser created')
+        # print('ShopUser created')
         ShopUserProfile.objects.create(user=instance)
     else:
-        print('ShopUser modified')
+        # print('ShopUser modified')
         instance.shopuserprofile.save()

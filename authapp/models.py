@@ -54,6 +54,10 @@ class ShopUser(AbstractUser):
         verbose_name_plural = 'Пользователи'
         ordering = ['-is_active', '-is_superuser', '-is_staff', 'username']
 
+    # def save(self, *args, **kwargs):
+    #     object = super(ShopUser, self).save(*args, **kwargs)
+    #     object.shopuserprofile.save()
+
 
 # class NewShopUser(AbstractUser):
 #     pass

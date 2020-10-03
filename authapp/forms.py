@@ -5,7 +5,7 @@ import django.forms as forms
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm, \
     PasswordChangeForm
 
-from authapp.models import ShopUser
+from authapp.models import ShopUser, ShopUserProfile
 
 
 class CleanAgeMixin:
@@ -35,7 +35,7 @@ class ShopUserAuthenticationForm(AuthenticationForm):
             # print(self.initial)
             # self.initial.update({'redirect_url': self.redirect_url.render})
             # Оставил сво вариант:
-            self.redirect_url = forms.HiddenInput()\
+            self.redirect_url = forms.HiddenInput() \
                 .render(name='redirect_url', value=self.data['next'])
 
         # print(self.fields.items())
@@ -84,7 +84,7 @@ class ShopUserRegisterForm(UserCreationForm, CleanAgeMixin):
         return user
 
 
-class ShopUserProfileForm(UserChangeForm, CleanAgeMixin):
+class ShopUserUpdateForm(UserChangeForm, CleanAgeMixin):
     class Meta:
         model = ShopUser
         fields = ('username', 'first_name', 'last_name', 'email', 'password', 'age', 'avatar')
@@ -118,3 +118,15 @@ class ShopUserPasswordEditForm(PasswordChangeForm):
                 field.widget.attrs['placeholder'] = 'введите новый пароль'
             elif field_name == 'new_password2':
                 field.widget.attrs['placeholder'] = 'подтвердите новый пароль'
+
+
+class ShopUserProfileUpdateForm(forms.ModelForm):
+    class Meta:
+        model = ShopUserProfile
+        exclude = ('user',)
+        # fields = ('tagline', 'aboutMe', 'gender')
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'form-control'

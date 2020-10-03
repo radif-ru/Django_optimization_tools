@@ -7,6 +7,7 @@
     <form class="form-horizontal" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
+        {{ user_profile_form.as_p }}
         <input type="submit" value="Сохранить" class="form-control">
     </form>
     <a href="{% url 'auth:change_password' %}" class='btn btn-round form-control'>
