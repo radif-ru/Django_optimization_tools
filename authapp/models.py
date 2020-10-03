@@ -3,8 +3,8 @@ from django.db import models
 from django.urls import reverse
 from django.utils.timezone import now
 
-from shop import settings
-from shop.settings import USER_EXPIRES_TIMEDELTA
+from geekshop import settings
+from geekshop.settings import USER_EXPIRES_TIMEDELTA
 
 
 def get_activation_key_expires():
@@ -40,7 +40,7 @@ class ShopUser(AbstractUser):
 
         title = f'Подтверждение учетной записи {self.username}'
 
-        message = f'Для подтверждения учетной записи {self.username} на портале ' \
+        message = f'Для активации учетной записи {self.username} на портале ' \
                   f'{settings.DOMAIN_NAME} перейдите по ссылке: \n' \
                   f'{settings.DOMAIN_NAME}{verify_link}'
 

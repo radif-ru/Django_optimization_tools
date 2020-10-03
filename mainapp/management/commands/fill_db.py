@@ -44,10 +44,10 @@ class Command(BaseCommand):
         if not ShopUser.objects.filter(username='django').exists():
             # создать обычный экземпляр моделей, без особенных свойств (обычного пользователя)
             # ShopUser.objects.create(username='django',
-            #                         email='admin@shop.local',
+            #                         email='admin@geekshop.local',
             #                         password='geekbrains')
             # создать суперюзера
             ShopUser.objects.create_superuser(username='django',
-                                              email='admin@shop.local',
+                                              email='admin@geekshop.local',
                                               password='geekbrains',
                                               age='29')

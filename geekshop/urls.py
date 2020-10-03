@@ -1,4 +1,4 @@
-"""shop URL Configuration
+"""geekshop URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -17,7 +17,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
-from shop import settings
+from geekshop import settings
 
 urlpatterns = [
     path('', include('mainapp.urls', namespace='main')),
@@ -25,6 +25,7 @@ urlpatterns = [
     path('basket/', include('basketapp.urls', namespace='basket')),
     path('my/admin/', include('adminapp.urls', namespace='my_admin')),
 
+    path('social/auth/', include('social_django.urls', namespace='social')),
     path('admin/', admin.site.urls),
 ]
 

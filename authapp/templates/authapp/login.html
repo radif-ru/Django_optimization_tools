@@ -27,6 +27,14 @@
        class='btn btn-round form-control'>
         Зарегистрироваться
     </a>
+    <a href="{% url 'social:begin' 'vk-oauth2' %}"
+       class='btn btn-round form-control'>
+        Вход через ВКонтакте
+    </a>
+    <a href="{% url 'social:begin' 'google-oauth2' %}"
+       class='btn btn-round form-control'>
+        Вход через Google+
+    </a>
     <a href="{% url 'main:index' %}"
        class='btn btn-round form-control'>
         На главную

@@ -6,7 +6,7 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.shortcuts import render, get_object_or_404
 
 from mainapp.models import ProductCategory, Product
-from shop.settings import BASE_DIR, JSON_PATH
+from geekshop.settings import BASE_DIR, JSON_PATH
 
 with open(os.path.join(BASE_DIR, f'{JSON_PATH}/links_menu.json'),
           encoding="utf-8") as f:
