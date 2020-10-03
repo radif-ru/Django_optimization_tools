@@ -1,12 +1,14 @@
 from django import forms
 from django.contrib import auth
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 
 from authapp.forms import ShopUserAuthenticationForm, ShopUserRegisterForm, ShopUserProfileForm, \
     ShopUserPasswordEditForm
-from authapp.models import ShopUser
+from authapp.models import ShopUser, ShopUserProfile
 
 
 def login(request):
@@ -138,3 +140,13 @@ def user_verify(request, email, activation_key):
     except Exception as e:
         print(f'error activation user : {e.args}')
         return HttpResponseRedirect(reverse('main:index'))
+
+
+@receiver(post_save, sender=ShopUser)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        print('ShopUser created')
+        ShopUserProfile.objects.create(user=instance)
+    else:
+        print('ShopUser modified')
+        instance.shopuserprofile.save()

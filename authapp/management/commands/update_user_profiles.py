@@ -9,5 +9,6 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         # print(ShopUser.objects.filter(shopuserprofile__isnull=True).count())
         for user in ShopUser.objects.filter(shopuserprofile__isnull=True):
-            user.shopuserprofile = ShopUserProfile.objects.create(user=user)
-            user.save()
+            ShopUserProfile.objects.create(user=user)
+            # user.shopuserprofile = ShopUserProfile.objects.create(user=user)
+            # user.save()
