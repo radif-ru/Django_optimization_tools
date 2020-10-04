@@ -1,5 +1,6 @@
 from django import forms
 from django.contrib import auth
+from django.db import transaction
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.http import HttpResponseRedirect
@@ -82,6 +83,9 @@ def user_register(request):
     return render(request, 'authapp/user_register.html', context)
 
 
+# Так как теперь изменения сохраняются в двух моделях,
+# для обеспечения целостности данных применяем к контроллеру декоратор @transaction.atomic
+@transaction.atomic
 def user_profile(request):
     if request.method == 'POST':
         # instance подтягивает данные, вместо создания нового объекта
@@ -92,7 +96,8 @@ def user_profile(request):
         )
         if profile_form.is_valid() and user_profile.is_valid():
             profile_form.save()
-            # user_profile.save()
+            #  user_profile сохранится автоматически, так как используется @receiver в методе ниже
+            # user_profile.save()  # вариант сохранения без @receiver(post_save, sender=ShopUser)
             return HttpResponseRedirect(reverse('main:index'))
     else:
         profile_form = ShopUserUpdateForm(instance=request.user)

@@ -9,6 +9,14 @@
         {{ register_form.as_p }}
         <input type="submit" value="Зарегистрироваться" class="form-control">
     </form>
+    {#    <a href="{% url 'social:begin' 'google-oauth2' %}?next=/"#}
+    {#       class='btn btn-round form-control'>#}
+    {#        Регистрация через Google+#}
+    {#    </a>#}
+    {#    <a href="{% url 'social:begin' 'vk-oauth2' %}?next=/"#}
+    {#       class='btn btn-round form-control'>#}
+    {#        Регистрация через ВКонтакте#}
+    {#    </a>#}
     <a href="{% url 'main:index' %}" class='btn btn-round form-control'>
         На главную
     </a>
