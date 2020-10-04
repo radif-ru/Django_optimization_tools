@@ -16,19 +16,22 @@
             </li>
         {% endfor %}
         {% if user.is_superuser %}
-        <li class="menu_list">
-            <a href="{% url 'my_admin:index' %}" class="menu_link forms-menu">
-                админка
-            </a>
-            <a href="{% url 'auth:logout' %}" class="menu_link forms-menu">
-                выход
-            </a>
-        </li>
+            <li class="menu_list">
+                <a href="{% url 'my_admin:index' %}" class="menu_link forms-menu">
+                    админка
+                </a>
+                <a href="{% url 'auth:logout' %}" class="menu_link forms-menu">
+                    выход
+                </a>
+            </li>
         {% endif %}
         {% if user.is_authenticated %}
             <li class="menu_list">
                 <a href="{% url 'auth:user_profile' %}" class="menu_link forms-menu">
                     {{ user.first_name|default:'Пользователь' }}
+                </a>
+                <a href="{% url 'orders:index' %}" class="menu_link forms-menu">
+                    заказы
                 </a>
                 <a href="{% url 'auth:logout' %}" class="menu_link forms-menu">
                     выход
@@ -51,9 +54,30 @@
                     <span class="basket-items">{{ user.basket_cost|floatformat:0 }} &#8381; ({{ user.basket_total_quantity }} шт)</span>
                 </a>
             </li>
+            {#            <li class="menu_list">#}
+            {#                <div class="dropdown">#}
+            {#                    <a class="dropdown-toggle menu_link forms-menu" href="" data-toggle="dropdown">#}
+            {#                        {{ user.first_name|default:'Пользователь' }}#}
+            {#                        <span class="caret"></span>#}
+            {#                    </a>#}
+            {#                    <ul class="dropdown-menu">#}
+            {#                        <li>#}
+            {#                            <a href="{% url 'auth:user_profile' %}" class="menu_link forms-menu">#}
+            {#                                профиль#}
+            {#                            </a>#}
+            {#                        </li>#}
+            {#                        <li>#}
+            {#                            <a href="{% url 'orders:index' %}" class="menu_link forms-menu">#}
+            {#                                заказы#}
+            {#                            </a>#}
+            {#                        </li>#}
+            {#                    </ul>#}
+            {#                </div>#}
+            {#            </li>#}
         {% endif %}
         <li class="menu_list">
-            <a href="{% url 'main:products' %}" class="menu_link"><img src="{% static 'img/search.svg' %}" alt="img"></a>
+            <a href="{% url 'main:products' %}" class="menu_link"><img src="{% static 'img/search.svg' %}"
+                                                                       alt="img"></a>
         </li>
     </ul>
 </header>
