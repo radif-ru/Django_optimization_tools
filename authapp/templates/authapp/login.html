@@ -27,11 +27,11 @@
        class='btn btn-round form-control'>
         Зарегистрироваться
     </a>
-    <a href="{% url 'social:begin' 'vk-oauth2' %}"
+    <a href="{% url 'social:begin' 'vk-oauth2' %}?next=/"
        class='btn btn-round form-control'>
         Вход через ВКонтакте
     </a>
-    <a href="{% url 'social:begin' 'google-oauth2' %}"
+    <a href="{% url 'social:begin' 'google-oauth2' %}?next=/"
        class='btn btn-round form-control'>
         Вход через Google+
     </a>
