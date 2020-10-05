@@ -125,6 +125,7 @@ def catalog(request, pk, page=1):
     context = {
         'page_title': 'Catalog',
         'links_menu': LINKS_MENU,
+        'products': all_products,
         'category': category,
         'featured_new_products': all_products,
     }
