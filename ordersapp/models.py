@@ -31,7 +31,7 @@ class Order(models.Model):
     is_active = models.BooleanField(verbose_name='активен', default=True)
 
     class Meta:
-        ordering = ('-created',)
+        ordering = ('-is_active', '-created',)
         verbose_name = 'заказ'
         verbose_name_plural = 'заказы'
 
@@ -64,6 +64,7 @@ class Order(models.Model):
     #     self.is_active = False
     #     self.save()
     def delete(self, **kwargs):
+        self.is_active = False
         self.status = self.CANCEL
         self.save()
 

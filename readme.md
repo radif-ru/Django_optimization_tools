@@ -1,1 +1,1 @@
-ok
+https://django.radif.ru
