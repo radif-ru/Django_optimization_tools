@@ -34,7 +34,7 @@ body {
 }
 
 /*центрирование содержимого сайта */
-.container {
+.my-container {
   width: 1366px;
   margin: 0 auto;
 }
@@ -90,7 +90,7 @@ body {
   font-size: 14px;
   font-weight: 300;
   text-transform: uppercase;
-  text-decoration: none;
+  text-decoration: none !important;
   padding: 10px 10px;
   transition: 0.1s;
 }
@@ -145,7 +145,7 @@ body {
   line-height: 45px;
   text-align: center;
   display: inline-block;
-  text-decoration: none;
+  text-decoration: none !important;
   letter-spacing: 3.6px;
   transition: 0.2s;
 }
@@ -161,6 +161,7 @@ body {
 }
 
 .pagination {
+  display: inline-block;
   position: absolute;
   width: 1170px;
   bottom: 19px;
@@ -198,7 +199,7 @@ body {
 }
 
 .products-menu_link {
-  text-decoration: none;
+  text-decoration: none !important;
   color: #6c6c6c;
   font-size: 36px;
   font-weight: 700;
@@ -225,9 +226,12 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3.6px;
-  text-decoration: none;
+  text-decoration: none !important;
   position: relative;
   bottom: 27px;
+}
+.products-explore img {
+  vertical-align: initial;
 }
 .products-explore:hover {
   opacity: 0.7;
@@ -276,6 +280,7 @@ body {
   width: 12px;
   height: 20px;
   padding: 14px 18px;
+  box-sizing: content-box;
 }
 .products_list__hov-img:hover {
   background-color: gainsboro;
@@ -377,6 +382,9 @@ body {
   padding-bottom: 5px;
   overflow: auto;
 }
+.slider_text_pos .button {
+  margin-left: 4px;
+}
 
 .slider_trending__red {
   color: #e53935;
@@ -456,7 +464,6 @@ body {
 /*footer */
 .footer {
   background-color: #f7f7f7;
-  height: 384px;
 }
 
 .block-1 {
@@ -519,7 +526,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.7px;
-  text-decoration: none;
+  text-decoration: none !important;
   line-height: 26px;
 }
 .block-useful:hover {
@@ -539,6 +546,8 @@ body {
   color: #6c6c6c;
   border: 1px solid #d9dee1;
   text-transform: capitalize;
+  box-sizing: content-box;
+  text-decoration: none;
 }
 .email-input:focus {
   color: black;
@@ -552,6 +561,7 @@ body {
   top: 14px;
   right: 14px;
   transition: 0.2s;
+  text-decoration: none !important;
 }
 .submit-input:active {
   transform: scale(1.4);
@@ -646,7 +656,7 @@ body {
   border-bottom: solid 1px #6c6c6c;
   height: 1px;
   width: 300px;
-  top: 40px;
+  top: 46px;
   z-index: -1;
 }
 
@@ -664,7 +674,7 @@ body {
   color: #212121;
   font-size: 42px;
   display: inline-block;
-  text-decoration: none;
+  text-decoration: none !important;
   transition: 1s;
 }
 .trending .trending-products_icon-loop2:hover {
@@ -711,6 +721,7 @@ body {
   color: #6c6c6c;
   font-size: 14px;
   font-weight: 700;
+  margin-bottom: 0;
 }
 .interior-contact .contact p:not(:last-child):nth-child(2n) {
   color: #212121;
@@ -718,7 +729,7 @@ body {
   margin-bottom: 13px;
 }
 .interior-contact .contact a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: inherit;
 }
 
@@ -739,7 +750,7 @@ body {
   display: inline-block;
 }
 .dealis-links .dealis-links-li .dealis-links-a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: #6c6c6c;
   font-size: 18px;
   text-transform: uppercase;
@@ -813,6 +824,7 @@ body {
 }
 .product-dealis-container .button_width__red {
   width: 100%;
+  height: 55px;
   background-color: #f44336;
   color: #ffffff;
   font-size: 22px;
@@ -960,7 +972,7 @@ input[type=submit]:hover, .btn:hover {
   list-style-type: none;
 }
 .admin-menu-list a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .users-list .not-active {
@@ -1041,15 +1053,19 @@ input[type=submit]:hover, .btn:hover {
   transform: scale(1.3);
 }
 .paginator a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: saddlebrown;
 }
 
 .product-detail a.button {
-  text-decoration: none;
+  text-decoration: none !important;
   padding: 0;
   height: 66px;
   line-height: 66px;
+}
+
+.dropdown .dropdown-menu .menu_link:hover {
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */
