@@ -63,6 +63,9 @@ class Order(models.Model):
     #
     #     self.is_active = False
     #     self.save()
+    def delete(self, **kwargs):
+        self.status = self.CANCEL
+        self.save()
 
 
 class OrderItem(models.Model):

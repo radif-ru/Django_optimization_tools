@@ -8,10 +8,17 @@ from ordersapp.models import Order, OrderItem
 
 
 class OrderList(ListView):
+    extra_context = {
+        "page_title": "заказы",
+    }
     model = Order
 
 
 class OrderCreate(CreateView):
+    extra_context = {
+        "page_title": "заказы/добавить заказ",
+    }
+
     model = Order
     form_class = OrderForm
     success_url = reverse_lazy('orders:index')
@@ -63,6 +70,10 @@ class OrderCreate(CreateView):
 
 
 class OrderUpdate(UpdateView):
+    extra_context = {
+        "page_title": "заказы/обновление заказа",
+    }
+
     model = Order
     form_class = OrderForm
     success_url = reverse_lazy('orders:index')
@@ -100,10 +111,15 @@ class OrderUpdate(UpdateView):
 
 
 class OrderDetail(DetailView):
+    extra_context = {
+        "page_title": "заказы/подробности",
+    }
     model = Order
 
 
 class OrderDelete(DeleteView):
     model = Order
-    # success_url = reverse_lazy('ordersapp:orders_list')
+    extra_context = {
+        "page_title": "заказы/удаление заказа",
+    }
     success_url = reverse_lazy('ordersapp:index')
