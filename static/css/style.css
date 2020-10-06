@@ -1068,4 +1068,12 @@ input[type=submit]:hover, .btn:hover {
   border: none;
 }
 
+.td1, .td2, .td3, .td4 {
+  text-align: center;
+}
+
+.form-control {
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */

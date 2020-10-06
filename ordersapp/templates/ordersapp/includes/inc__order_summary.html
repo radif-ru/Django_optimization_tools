@@ -9,7 +9,7 @@
         общее количество товаров: <span class="order_total_quantity">{{ object.total_quantity }}</span>
     </div>
     <div class="h3">
-        общая стоимость: <span class="order_total_cost">{{ object.total_cost }}</span> руб
+        общая стоимость: <span class="order_total_cost">{{ object.total_cost }}</span>&nbsp;&#8381;
     </div>
 {% else %}
     <div class="h2">Новый заказ</div>
@@ -20,7 +20,7 @@
             общее количество товаров: <span class="order_total_quantity">{{ user.basket_total_quantity }}</span>
         </div>
         <div class="h3">
-            общая стоимость: <span class="order_total_cost">{{ user.basket_cost }}</span> руб
+            общая стоимость: <span class="order_total_cost">{{ user.basket_cost }}</span>&nbsp;&#8381;
         </div>
     {% endif %}
 {% endif %}

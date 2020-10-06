@@ -1,4 +1,6 @@
 from django.contrib.auth.decorators import login_required
+from django.db.models.signals import pre_save, pre_delete
+from django.dispatch import receiver
 from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.template import loader
@@ -8,6 +10,7 @@ from authapp.models import ShopUser
 from basketapp.models import BasketItem
 from mainapp.models import Product
 from mainapp.views import LINKS_MENU
+from ordersapp.models import OrderItem
 
 
 @login_required
@@ -82,3 +85,22 @@ def change(request, pk, quantity):
             # 'basket_total_quantity': user.basket_total_quantity(),
             # 'basket_item': basket_item,  # serialization -> drf
         })
+
+
+@receiver(pre_save, sender=OrderItem)
+@receiver(pre_save, sender=BasketItem)  # если закомментить будет работа только с заказом
+def product_quantity_update_save(sender, update_fields, instance, **kwargs):
+    print('pre_save', type(sender))
+    if instance.pk:
+        instance.product.quantity -= instance.quantity - sender.get_item(instance.pk).quantity
+    else:
+        instance.product.quantity -= instance.quantity
+    instance.product.save()
+
+
+@receiver(pre_delete, sender=OrderItem)
+@receiver(pre_delete, sender=BasketItem)  # если закомментить будет работа только с заказом
+def product_quantity_update_delete(sender, instance, **kwargs):
+    print('pre_delete', type(sender))
+    instance.product.quantity += instance.quantity
+    instance.product.save()

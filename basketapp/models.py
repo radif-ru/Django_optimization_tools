@@ -5,16 +5,16 @@ from authapp.models import ShopUser
 from mainapp.models import Product
 
 
-class BasketQuerySet(models.QuerySet):
-    def delete(self):
-        for object in self:
-            object.product.quantity += object.quantity
-            object.product.save()
-        super().delete()
+# class BasketQuerySet(models.QuerySet):
+#     def delete(self):
+#         for object in self:
+#             object.product.quantity += object.quantity
+#             object.product.save()
+#         super().delete()
 
 
 class BasketItem(models.Model):
-    objects = BasketQuerySet.as_manager()
+    # objects = BasketQuerySet.as_manager()
 
     # user = models.ForeignKey(ShopUser, on_delete=models.CASCADE)
     user = models.ForeignKey(
@@ -32,7 +32,12 @@ class BasketItem(models.Model):
         verbose_name_plural = 'корзины'
         ordering = ['product']
 
-    def delete(self, using=None, keep_parents=False):
-        self.product.quantity += self.quantity
-        self.product.save()
-        super().delete(using=None, keep_parents=False)
+    # def delete(self, using=None, keep_parents=False):
+    #     self.product.quantity += self.quantity
+    #     self.product.save()
+    #     super().delete(using=None, keep_parents=False)
+
+    @classmethod
+    def get_item(cls, pk):
+        return cls.objects.filter(pk=pk).first()
+
