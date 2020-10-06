@@ -62,7 +62,7 @@ class OrderCreate(CreateView):
             if orderitems.is_valid():
                 orderitems.instance = self.object  # one to many
                 orderitems.save()
-            self.request.user.user_basket.all().delete()
+            self.request.user.user_basket.all().delete()  # applied QuerySet
 
         # удаляем пустой заказ
         if self.object.total_cost == 0:
@@ -106,7 +106,7 @@ class OrderUpdate(UpdateView):
                 orderitems.save()
 
         # удаляем пустой заказ
-        if self.object.get_total_cost() == 0:
+        if self.object.total_cost == 0:
             self.object.delete()
 
         return super().form_valid(form)

@@ -6,7 +6,7 @@
     "short_desc": "настольная лампа",
     "description": "немного странная, но светит хорошо",
     "price": "564.29",
-    "quantity": 5
+    "quantity": 1000
   },
   {
     "category": "home",
@@ -15,7 +15,7 @@
     "short_desc": "кресло",
     "description": "синего цвета, очень удобное",
     "price": "9562.15",
-    "quantity": 11
+    "quantity": 1000
   },
   {
     "category": "classic",
@@ -24,7 +24,7 @@
     "short_desc": "ваза",
     "description": "то ли ваза, то ли чайник",
     "price": "622.27",
-    "quantity": 3
+    "quantity": 1000
   },
   {
     "category": "furniture",
@@ -33,7 +33,7 @@
     "short_desc": "ажурный стул",
     "description": "вполне сносный",
     "price": "2455",
-    "quantity": 4
+    "quantity": 1000
   },
   {
     "category": "furniture",
@@ -42,7 +42,7 @@
     "short_desc": "офисный стул",
     "description": "зачётный",
     "price": "949.99",
-    "quantity": 25
+    "quantity": 1000
   },
   {
     "category": "home",
@@ -51,7 +51,7 @@
     "short_desc": "ступка и пестик",
     "description": "высокое качество",
     "price": "1550.44",
-    "quantity": 2
+    "quantity": 1000
   },
   {
     "category": "modern",
@@ -60,7 +60,7 @@
     "short_desc": "настенный патрон",
     "description": "довольно неплох",
     "price": "550.62",
-    "quantity": 50
+    "quantity": 1000
   },
   {
     "category": "modern",
@@ -69,7 +69,7 @@
     "short_desc": "люстра",
     "description": "высокое качество",
     "price": "3550.12",
-    "quantity": 18
+    "quantity": 1000
   },
   {
     "category": "office",
@@ -78,7 +78,7 @@
     "short_desc": "торшер",
     "description": "так себе",
     "price": "10.20",
-    "quantity": 12
+    "quantity": 1000
   },
   {
     "category": "classic",
@@ -87,6 +87,6 @@
     "short_desc": "бра",
     "description": "необычный",
     "price": "5.10",
-    "quantity": 11
+    "quantity": 1000
   }
 ]
