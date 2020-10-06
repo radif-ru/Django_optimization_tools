@@ -1,0 +1,35 @@
+server {
+    listen radif.ru:80;
+    server_name radif.ru;
+    return 301 https://$host$request_uri;
+}
+
+
+server {
+#    listen 443 ssl;
+    server_name radif.ru;
+    listen radif.ru:443 ssl; # default_server;
+    # выше можно добавить default_server для клиентов без SNI
+
+    ssl_certificate /etc/letsencrypt/live/radif.ru/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/radif.ru/privkey.pem;
+    ssl_trusted_certificate /etc/letsencrypt/live/radif.ru/chain.pem;
+
+    ssl_stapling on;
+    ssl_stapling_verify on;
+#    resolver 127.0.0.1 8.8.8.8;
+    resolver 45.89.230.30;
+
+    # исключим возврат на http-версию сайта
+    add_header Strict-Transport-Security "max-age=31536000";
+
+    # явно "сломаем" все картинки с http://
+    add_header Content-Security-Policy "img-src https: data:; upgrade-insecure-requests";
+        
+    location / {
+        root /home/radif/www;
+	index index.html index.htm;
+	autoindex on;
+    }
+}
+

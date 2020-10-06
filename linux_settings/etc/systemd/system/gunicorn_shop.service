@@ -1,0 +1,17 @@
+[Unit]
+Description=gunicorn daemon
+Requires=gunicorn_shop.socket
+After=network.target
+
+[Service]
+User=radif
+Group=www-data
+WorkingDirectory=/home/radif/Django_optimization_tools
+ExecStart=/home/radif/Django_optimization_tools/myprojectenv/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind unix:/run/gunicorn_shop.sock \
+          geekshop.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
