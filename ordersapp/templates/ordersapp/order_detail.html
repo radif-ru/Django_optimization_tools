@@ -11,9 +11,9 @@
                      alt="{{ item.product.short_desc }}">
                 <div><span class="category_name">{{ item.product.category.name }}</span></div>
                 <div><span class="product_name">{{ item.product.name }}</span></div>
-                <div><span class="product_price">{{ item.product.price }}&nbspруб</span></div>
+                <div><span class="product_price">{{ item.product.price }}&nbsp&#8381;</span></div>
                 <div><span class="product_quantitiy">x {{ item.quantity }} шт.</span></div>
-                <div><span class="product_cost"> = {{ item.get_product_cost }}&nbspруб</span></div>
+                <div><span class="product_cost"> = {{ item.product_cost }}&nbsp&#8381;</span></div>
             </div>
         {% endfor %}
     </div>

@@ -63,7 +63,7 @@ class OrderCreate(CreateView):
             self.request.user.user_basket.all().delete()
 
         # удаляем пустой заказ
-        if self.object.get_total_cost() == 0:
+        if self.object.total_cost == 0:
             self.object.delete()
 
         return super().form_valid(form)
