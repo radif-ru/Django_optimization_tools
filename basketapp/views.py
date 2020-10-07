@@ -6,7 +6,6 @@ from django.shortcuts import render, get_object_or_404
 from django.template import loader
 from django.urls import reverse
 
-from authapp.models import ShopUser
 from basketapp.models import BasketItem
 from mainapp.models import Product
 from mainapp.views import LINKS_MENU
@@ -95,6 +94,13 @@ def product_quantity_update_save(sender, update_fields, instance, **kwargs):
         instance.product.quantity -= instance.quantity - sender.get_item(instance.pk).quantity
     else:
         instance.product.quantity -= instance.quantity
+
+    # перехватывание ошибки при количестве товаров меньше 0:
+    if instance.product.quantity <= 0:
+        instance.product.quantity = 0
+        # Надо разобраться как отрендерить страницу с ошибкой, render, HttpResponseRedirect не работают:
+        # return HttpResponseRedirect(reverse('basket:product_quantity_err'))
+        # return render(request, template_name='basketapp/product_quantity_err.html')
     instance.product.save()
 
 
@@ -104,3 +110,7 @@ def product_quantity_update_delete(sender, instance, **kwargs):
     print('pre_delete', type(sender))
     instance.product.quantity += instance.quantity
     instance.product.save()
+
+
+# def product_quantity_err(request):
+#     return render(request, 'basketapp/product_quantity_err.html')

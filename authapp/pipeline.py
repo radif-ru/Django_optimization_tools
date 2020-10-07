@@ -28,7 +28,7 @@ def save_user_profile(backend, user, response, *args, **kwargs):
         if 'picture' in response.keys():
             # https://lh3.googleusercontent.com/a-/AOh14GhtZ2z-Qeb9wYqrYFhudmIn0aFeTwcnet8LMBmv
             url_img = response['picture']
-            img_name = url_img[-6:-1]  # 8LMBm
+            img_name = f"{response['name']}_{url_img[-6:-1]}"  # Radif_8LMBm
             r = requests.get(url_img)
 
             if r.status_code == requests.codes.ok:

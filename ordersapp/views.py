@@ -1,22 +1,34 @@
+from django.contrib.auth.decorators import login_required
 from django.db import transaction
 from django.forms import inlineformset_factory
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy, reverse
+from django.utils.decorators import method_decorator
 from django.views.generic import ListView, CreateView, UpdateView, DetailView, DeleteView
 
 from ordersapp.forms import OrderForm, OrderItemForm
 from ordersapp.models import Order, OrderItem
 
 
-class OrderList(ListView):
+class OnlyLoggedUserMixin:
+    @method_decorator(login_required())
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
+
+class OrderList(OnlyLoggedUserMixin, ListView):
     extra_context = {
         "page_title": "заказы",
     }
     model = Order
 
+    def get_queryset(self):
+        return Order.objects.filter(user=self.request.user)
+    # self.request.kwargs
 
-class OrderCreate(CreateView):
+
+class OrderCreate(OnlyLoggedUserMixin, CreateView):
     extra_context = {
         "page_title": "заказы/добавить заказ",
     }
@@ -71,7 +83,7 @@ class OrderCreate(CreateView):
         return super().form_valid(form)
 
 
-class OrderUpdate(UpdateView):
+class OrderUpdate(OnlyLoggedUserMixin, UpdateView):
     extra_context = {
         "page_title": "заказы/обновление заказа",
     }
@@ -115,14 +127,14 @@ class OrderUpdate(UpdateView):
         return super().form_valid(form)
 
 
-class OrderDetail(DetailView):
+class OrderDetail(OnlyLoggedUserMixin, DetailView):
     extra_context = {
         "page_title": "заказы/подробности",
     }
     model = Order
 
 
-class OrderDelete(DeleteView):
+class OrderDelete(OnlyLoggedUserMixin, DeleteView):
     model = Order
     extra_context = {
         "page_title": "заказы/удаление заказа",
@@ -130,6 +142,7 @@ class OrderDelete(DeleteView):
     success_url = reverse_lazy('ordersapp:index')
 
 
+@login_required()
 def order_forming_complete(request, pk):
    order = get_object_or_404(Order, pk=pk)
    order.status = Order.SENT_TO_PROCEED

@@ -26,4 +26,5 @@ urlpatterns = [
     # re_path(r'^add/product/(?P<pk>\d+)/$', basketapp.add, name='add'),
     path('change/<int:pk>/quantity/<int:quantity>/', basketapp.change),  # ajax
     path('delete/basket/item/<int:pk>/', basketapp.delete, name='delete'),
+    # path('product/quantity/err/', basketapp.product_quantity_err, name='product_quantity_err'),
 ]

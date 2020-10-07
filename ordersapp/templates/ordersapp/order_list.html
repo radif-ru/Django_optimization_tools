@@ -3,7 +3,8 @@
 
 {% block container %}
     <div class="h2 text-center head">
-        Ваши заказы, {{ user.first_name|default:'пользователь'|title }}
+        Ваши заказы, {{ user.first_name|default:user }}
+
     </div>
     <table class="table orders_list">
         <thead>
@@ -16,6 +17,7 @@
         </thead>
         <tbody>
         {% for item in object_list %}
+
             <tr>
                 <td class="td1 orders_list">{{ item.pk }}</td>
                 <td>{{ item.created|date:"Y-m-d H:i:s" }}</td>
@@ -41,6 +43,7 @@
                     {% endif %}
                 </td>
             </tr>
+
         {% endfor %}
         </tbody>
     </table>
