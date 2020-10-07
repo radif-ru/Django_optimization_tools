@@ -35,6 +35,10 @@ class Product(models.Model):
         return f'{self.name} ({self.description}). ' \
                f'Категория - {self.category.name} ({self.category.description})'
 
+    @classmethod
+    def get_items(cls):
+        return cls.objects.filter(is_active=True)
+
     class Meta:
         verbose_name = 'продукт'
         verbose_name_plural = 'продукты'

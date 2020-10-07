@@ -4,7 +4,7 @@ from django.urls import reverse
 from django.utils.timezone import now
 
 from geekshop import settings
-from geekshop.settings import USER_EXPIRES_TIMEDELTA
+from geekshop.settings import USER_EXPIRES_TIMEDELTA, USERS_AVATARS
 
 
 def get_activation_key_expires():
@@ -14,7 +14,7 @@ def get_activation_key_expires():
 class ShopUser(AbstractUser):
     email = models.EmailField(verbose_name='электронный адрес', unique=True)
     age = models.PositiveIntegerField(verbose_name='возраст', null=True)
-    avatar = models.ImageField(upload_to='users_avatars', blank=True)
+    avatar = models.ImageField(upload_to=USERS_AVATARS, blank=True)
     activation_key = models.CharField(max_length=128, blank=True)
     activation_key_expires = models.DateTimeField(
         default=get_activation_key_expires

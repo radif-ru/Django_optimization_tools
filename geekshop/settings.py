@@ -135,6 +135,8 @@ STATICFILES_DIRS = (
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+USERS_AVATARS = 'users_avatars'
+
 AUTH_USER_MODEL = 'authapp.ShopUser'
 
 JSON_PATH = 'json'

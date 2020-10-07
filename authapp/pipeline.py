@@ -1,13 +1,16 @@
+import hashlib
 from collections import OrderedDict
 from datetime import datetime
 from urllib.parse import urlunparse, urlencode
+from urllib.request import urlopen
 
 import requests
+from django.core.files.base import ContentFile
 from django.utils import timezone
 from social_core.exceptions import AuthForbidden
 
-from authapp.models import ShopUserProfile
-from geekshop.settings import MEDIA_URL
+from authapp.models import ShopUserProfile, ShopUser
+from geekshop.settings import MEDIA_URL, USERS_AVATARS
 
 
 def save_user_profile(backend, user, response, *args, **kwargs):
@@ -28,14 +31,17 @@ def save_user_profile(backend, user, response, *args, **kwargs):
         if 'picture' in response.keys():
             # https://lh3.googleusercontent.com/a-/AOh14GhtZ2z-Qeb9wYqrYFhudmIn0aFeTwcnet8LMBmv
             url_img = response['picture']
-            img_name = f"{response['name']}_{url_img[-6:-1]}"  # Radif_8LMBm
-            r = requests.get(url_img)
-
-            if r.status_code == requests.codes.ok:
-                with open(f'media/users_avatars/{img_name}.jpg', "wb") as out:
-                    out.write(r.content)
-
-            user.avatar = f'users_avatars/{img_name}.jpg'
+            # img_name = f"{response['name']}_{url_img[-6:-1]}"  # Radif_8LMBm
+            # r = requests.get(url_img)
+            #
+            # if r.status_code == requests.codes.ok:
+            #     with open(f'media/users_avatars/{img_name}.jpg', "wb") as out:
+            #         out.write(r.content)
+            #
+            # user.avatar = f'users_avatars/{img_name}.jpg'
+            img_name = f"{user.username}_{hashlib.md5(url_img.encode()).hexdigest()}.jpg"
+            if not user.avatar or user.avatar != f'{USERS_AVATARS}/{img_name}':
+                user.avatar.save(img_name, ContentFile(urlopen(url_img).read()))
 
         if 'ageRange' in response.keys():
             minAge = response['ageRange']['min']
