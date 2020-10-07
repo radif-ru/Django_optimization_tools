@@ -3,6 +3,7 @@ import os
 import random
 
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
 
 from mainapp.models import ProductCategory, Product
@@ -130,3 +131,9 @@ def catalog(request, pk, page=1):
         'featured_new_products': all_products,
     }
     return render(request, 'mainapp/catalog.html', context)
+
+
+def product_price(request, pk):
+    if request.is_ajax():
+        product = Product.objects.filter(pk=int(pk)).first()
+        return JsonResponse({'price': product and product.price or 0})

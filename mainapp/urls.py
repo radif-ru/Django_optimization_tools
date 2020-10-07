@@ -33,5 +33,7 @@ urlpatterns = [
 
     path('product/<int:pk>/', mainapp.product_page, name='product_page'),
 
+    path('product/<int:pk>/price/', mainapp.product_price),
+
     path('contact/', mainapp.contact, name='contact'),
 ]
