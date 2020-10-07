@@ -1,0 +1,13 @@
+{% extends 'basketapp/base.html' %}
+{% load static %}
+
+{% block container %}
+    <h1 class="helptext">На складе нет необходимого количества товаров!</h1>
+    <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-round in-home">
+        Вернуться назад
+    </a>
+    <a href="{% url 'main:index' %}" class="btn btn-round in-home">
+        На главную
+    </a>
+{% endblock %}
+
