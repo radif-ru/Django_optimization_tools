@@ -37,7 +37,7 @@ class Product(models.Model):
 
     @classmethod
     def get_items(cls):
-        return cls.objects.filter(is_active=True)
+        return cls.objects.filter(is_active=True, category__is_active=True)
 
     class Meta:
         verbose_name = 'продукт'
