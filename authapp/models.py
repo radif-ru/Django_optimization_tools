@@ -29,7 +29,7 @@ class ShopUser(AbstractUser):
         return self.user_basket.all()
 
     def basket_cost(self):
-        return sum(item.product.price * item.quantity for item in self.basket_items
+        return sum(item.product.price * item.quantity for item in self.basket_items)
 
     def basket_total_quantity(self):
         return sum(item.quantity for item in self.basket_items)
