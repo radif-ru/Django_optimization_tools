@@ -23,11 +23,15 @@ class ShopUser(AbstractUser):
     def is_activation_key_expired(self):
         return now() > self.activation_key_expires
 
+    @cached_roperty
+    def basket_items(self):
+        return self.user_basket.all()
+
     def basket_cost(self):
-        return sum(item.product.price * item.quantity for item in self.user_basket.all())
+        return sum(item.product.price * item.quantity for item in self.basket_items)
 
     def basket_total_quantity(self):
-        return sum(item.quantity for item in self.user_basket.all())
+        return sum(item.quantity for item in self.basket_items)
 
     def send_verify_mail(self):
         verify_link = reverse(
