@@ -29,6 +29,7 @@ ALLOWED_HOSTS = ['127.0.0.1',
                  'localhost',
                  'django.radif.ru',
                  'www.django.radif.ru',
+                 '45.89.230.30',
                  ]
 
 # Application definition
@@ -106,7 +107,8 @@ DATABASES = {
         'NAME': DATABASE.get('NAME', ''),
         'USER': DATABASE.get('USER', ''),
         'PASSWORD': DATABASE.get('PASSWORD', ''),
-        'HOST': '45.89.230.30'
+        'HOST': 'localhost',
+        # 'PORT': '5432',
     }
 }
 
