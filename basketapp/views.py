@@ -17,7 +17,9 @@ def index(request):
     # basket_items = BasketItem.objects.filter(user=request.user)
     # basket_items = request.user.basketitem_set.all()
     # при добавлении related_name в модель .._set перестаёт работать, работает заданное имя:
-    basket_items = request.user.user_basket.all()
+    basket_items = request.user.user_basket.select_related('product', 'product__category').all()  # подтягивает вместе с данными basket
+    # всё что по foreign key связано
+    print('basket_items', basket_items.query)  # содержимое запроса
     context = {
         'page_title': 'корзина',
         'links_menu': LINKS_MENU,

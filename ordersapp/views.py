@@ -98,7 +98,7 @@ class OrderUpdate(OnlyLoggedUserMixin, UpdateView):
             Order, OrderItem, form=OrderItemForm, extra=1
         )
         if self.request.POST:
-            formset =  OrderFormSet(
+            formset = OrderFormSet(
                 self.request.POST, self.request.FILES,
                 instance=self.object
             )
@@ -144,8 +144,8 @@ class OrderDelete(OnlyLoggedUserMixin, DeleteView):
 
 @login_required()
 def order_forming_complete(request, pk):
-   order = get_object_or_404(Order, pk=pk)
-   order.status = Order.SENT_TO_PROCEED
-   order.save()
+    order = get_object_or_404(Order, pk=pk)
+    order.status = Order.SENT_TO_PROCEED
+    order.save()
 
-   return HttpResponseRedirect(reverse('ordersapp:index'))
+    return HttpResponseRedirect(reverse('ordersapp:index'))
