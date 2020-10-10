@@ -1,0 +1,2365 @@
+events: Ticks
+summary: 557
+fn=<method 'values' of 'mappingproxy' objects>
+0  0
+
+fn=<method 'encode' of 'str' objects>
+0  0
+
+fn=<method 'replace' of 'str' objects>
+0  0
+
+fn=<method 'split' of 'str' objects>
+0  0
+
+fn=<method 'rsplit' of 'str' objects>
+0  0
+
+fn=<method 'join' of 'str' objects>
+0  0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/asgiref/local.py
+cfn=<genexpr>
+calls=9 43
+0 0
+
+fn=<method 'title' of 'str' objects>
+0  0
+
+fn=<method 'find' of 'str' objects>
+0  0
+
+fn=<method 'lower' of 'str' objects>
+0  0
+
+fn=<method 'lstrip' of 'str' objects>
+0  0
+
+fn=<method 'rstrip' of 'str' objects>
+0  0
+
+fn=<method 'rpartition' of 'str' objects>
+0  0
+
+fn=<method 'strip' of 'str' objects>
+0  0
+
+fn=<method 'upper' of 'str' objects>
+0  0
+
+fn=<method 'startswith' of 'str' objects>
+0  0
+
+fn=<method 'endswith' of 'str' objects>
+0  0
+
+fn=<method 'isidentifier' of 'str' objects>
+0  0
+
+fn=<method 'format' of 'str' objects>
+0  0
+
+fn=<method 'add' of 'set' objects>
+0  0
+
+fn=<method 'remove' of 'set' objects>
+0  0
+
+fn=<method 'bit_length' of 'int' objects>
+0  0
+
+fn=<method 'append' of 'list' objects>
+0  0
+
+fn=<method 'extend' of 'list' objects>
+0  0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+cfn=<genexpr>
+calls=11 551
+0 0
+
+fn=<method 'pop' of 'list' objects>
+0  0
+
+fn=<method 'decode' of 'bytes' objects>
+0  0
+
+fn=<method 'rstrip' of 'bytes' objects>
+0  0
+
+fn=<method 'values' of 'collections.OrderedDict' objects>
+0  0
+
+fn=<method 'get' of 'dict' objects>
+0  0
+
+fn=<method 'setdefault' of 'dict' objects>
+0  0
+
+fn=<method 'items' of 'dict' objects>
+0  0
+
+fn=<method 'update' of 'dict' objects>
+0  0
+
+fn=<method 'clear' of 'dict' objects>
+0  0
+
+fn=<method 'copy' of 'dict' objects>
+0  0
+
+fn=<built-in method builtins.any>
+0  0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/http/request.py
+cfn=<genexpr>
+calls=2 669
+0 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/inspect.py
+cfn=<genexpr>
+calls=3 37
+0 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/dispatch/dispatcher.py
+cfn=<genexpr>
+calls=22 113
+0 0
+
+fn=<built-in method builtins.callable>
+0  0
+
+fn=<built-in method builtins.getattr>
+0  0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/asgiref/local.py
+cfn=__getattr__
+calls=5 101
+0 0
+
+fn=<built-in method builtins.hasattr>
+0  0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/asgiref/local.py
+cfn=__getattr__
+calls=4 101
+0 0
+
+fn=<built-in method builtins.id>
+0  0
+
+fn=<built-in method builtins.isinstance>
+0  0
+
+fn=<built-in method builtins.iter>
+0  0
+
+fn=<built-in method builtins.len>
+0  0
+
+fn=<built-in method builtins.next>
+0  0
+
+fn=<built-in method builtins.sorted>
+0  0
+
+fn=<built-in method time.time>
+0  0
+
+fn=<built-in method _thread.allocate_lock>
+0  0
+
+fn=<built-in method _thread.get_ident>
+0  0
+
+fn=<method 'match' of 're.Pattern' objects>
+0  0
+
+fn=<method 'search' of 're.Pattern' objects>
+0  0
+
+fn=<method 'end' of 're.Match' objects>
+0  0
+
+fn=<method 'groups' of 're.Match' objects>
+0  0
+
+fn=<method 'groupdict' of 're.Match' objects>
+0  0
+
+fn=<method 'getrandbits' of '_random.Random' objects>
+0  0
+
+fn=<method 'clear' of 'collections.deque' objects>
+0  0
+
+fn=<built-in method sys.getrecursionlimit>
+0  0
+
+fn=<built-in method _imp.acquire_lock>
+0  0
+
+fn=<built-in method _imp.release_lock>
+0  0
+
+fn=<built-in method __new__ of type object at 0x907780>
+0  0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/messages/storage/fallback.py
+fn=<listcomp>
+15 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/messages/storage/cookie.py
+cfn=__init__
+calls=1 62
+15 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/messages/storage/session.py
+cfn=__init__
+calls=1 15
+15 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/messages/storage/fallback.py
+fn=__init__
+13 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/messages/storage/base.py
+cfn=__init__
+calls=1 52
+13 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/messages/storage/fallback.py
+cfn=<listcomp>
+calls=1 15
+13 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/messages/storage/base.py
+fn=__init__
+52 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/messages/storage/cookie.py
+fn=__init__
+62 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/messages/storage/base.py
+cfn=__init__
+calls=1 52
+62 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/signing.py
+cfn=get_cookie_signer
+calls=1 75
+62 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/messages/storage/session.py
+fn=__init__
+15 0
+cfn=<built-in method builtins.hasattr>
+calls=1 0
+15 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/messages/storage/base.py
+cfn=__init__
+calls=1 52
+15 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/middleware.py
+fn=__call__
+44 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/sql/panel.py
+cfn=enable_instrumentation
+calls=1 139
+44 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/templates/panel.py
+cfn=enable_instrumentation
+calls=1 166
+44 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/staticfiles.py
+cfn=enable_instrumentation
+calls=1 94
+44 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/cache.py
+cfn=enable_instrumentation
+calls=1 243
+44 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+cfn=process_request
+calls=1 181
+44 516
+cfn=<method 'startswith' of 'str' objects>
+calls=1 0
+44 0
+cfl=/home/radif/GeekBrains/Django_optimization_tools/geekshop/settings.py
+cfn=<lambda>
+calls=1 72
+44 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/toolbar.py
+cfn=__init__
+calls=1 19
+44 1
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/toolbar.py
+cfn=enabled_panels
+calls=1 46
+44 35
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+cfn=enable_instrumentation
+calls=8 124
+44 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/template_profiler_panel/panels/template.py
+cfn=enable_instrumentation
+calls=1 125
+44 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/sessions/backends/db.py
+fn=__init__
+16 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/sessions/backends/base.py
+cfn=__init__
+calls=1 48
+16 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/logging.py
+fn=__init__
+59 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+cfn=__init__
+calls=1 12
+59 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/logging.py
+fn=process_request
+75 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+cfn=process_request
+calls=1 181
+75 513
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/utils.py
+cfn=clear_collection
+calls=1 250
+75 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/profiling.py
+fn=process_request
+154 0
+cfl=/usr/lib/python3.8/cProfile.py
+cfn=runcall
+calls=1 106
+154 513
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/template_profiler_panel/panels/template.py
+fn=__init__
+23 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/template_profiler_panel/panels/template.py
+cfn=monkey_patch_template_classes
+calls=1 37
+23 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/dispatch/dispatcher.py
+cfn=connect
+calls=1 53
+23 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+cfn=__init__
+calls=1 12
+23 0
+
+fl=/usr/lib/python3.8/cProfile.py
+fn=runcall
+106 0
+cfn=<method 'enable' of '_lsprof.Profiler' objects>
+calls=1 0
+106 513
+cfn=<built-in method builtins.len>
+calls=1 0
+106 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/template_profiler_panel/panels/template.py
+fn=monkey_patch_template_classes
+37 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/template_profiler_panel/panels/template.py
+fn=enable_instrumentation
+125 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/staticfiles.py
+fn=__init__
+89 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+cfn=__init__
+calls=1 12
+89 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/staticfiles.py
+fn=enable_instrumentation
+94 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/functional.py
+cfn=__init__
+calls=1 257
+94 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/staticfiles.py
+fn=process_request
+114 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+cfn=process_request
+calls=1 181
+114 513
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/utils.py
+cfn=clear_collection
+calls=1 250
+114 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/cache.py
+fn=__init__
+149 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/dispatch/dispatcher.py
+cfn=connect
+calls=1 53
+149 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+cfn=__init__
+calls=1 12
+149 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/cache.py
+fn=enable_instrumentation
+243 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/cache/__init__.py
+cfn=__init__
+calls=1 63
+243 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/asgiref/local.py
+cfn=__del__
+calls=1 89
+243 0
+cfn=<built-in method builtins.isinstance>
+calls=1 0
+243 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/templates/panel.py
+fn=enable_instrumentation
+166 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/dispatch/dispatcher.py
+cfn=connect
+calls=1 53
+166 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/sql/tracking.py
+fn=wrap_cursor
+41 0
+cfn=<built-in method builtins.hasattr>
+calls=1 0
+41 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/templates/panel.py
+fn=__init__
+67 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+cfn=__init__
+calls=1 12
+67 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/toolbar.py
+fn=__init__
+19 0
+cfn=<method 'append' of 'list' objects>
+calls=14 0
+19 0
+cfn=<method 'copy' of 'dict' objects>
+calls=1 0
+19 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/toolbar.py
+cfn=get_panel_classes
+calls=1 114
+19 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/template_profiler_panel/panels/template.py
+cfn=__init__
+calls=1 23
+19 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+cfn=__init__
+calls=8 12
+19 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+cfn=enabled
+calls=14 22
+19 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+cfn=panel_id
+calls=14 18
+19 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/logging.py
+cfn=__init__
+calls=1 59
+19 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/cache.py
+cfn=__init__
+calls=1 149
+19 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/staticfiles.py
+cfn=__init__
+calls=1 89
+19 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/templates/panel.py
+cfn=__init__
+calls=1 67
+19 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/sql/panel.py
+cfn=__init__
+calls=1 56
+19 0
+cfn=<method 'pop' of 'list' objects>
+calls=14 0
+19 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/toolbar.py
+fn=<listcomp>
+51 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+cfn=enabled
+calls=14 22
+51 35
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/toolbar.py
+fn=enabled_panels
+46 0
+cfn=<method 'values' of 'collections.OrderedDict' objects>
+calls=1 0
+46 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/toolbar.py
+cfn=<listcomp>
+calls=1 51
+46 35
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/toolbar.py
+fn=get_panel_classes
+114 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+fn=__init__
+12 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+fn=panel_id
+18 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+fn=enabled
+22 35
+cfn=<method 'get' of 'dict' objects>
+calls=28 0
+22 0
+cfn=<method 'replace' of 'str' objects>
+calls=24 0
+22 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/utils.py
+cfn=get_name_from_obj
+calls=28 145
+22 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+cfn=panel_id
+calls=28 18
+22 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+fn=enable_instrumentation
+124 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+fn=record_stats
+150 0
+cfn=<method 'setdefault' of 'dict' objects>
+calls=1 0
+150 0
+cfn=<method 'update' of 'dict' objects>
+calls=1 0
+150 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+cfn=panel_id
+calls=1 18
+150 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+fn=process_request
+181 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+cfn=process_request
+calls=6 181
+181 514
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/timer.py
+cfn=process_request
+calls=1 61
+181 516
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/headers.py
+cfn=process_request
+calls=1 37
+181 514
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/staticfiles.py
+cfn=process_request
+calls=1 114
+181 513
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/logging.py
+cfn=process_request
+calls=1 75
+181 513
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/profiling.py
+cfn=process_request
+calls=1 154
+181 513
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/utils.py
+fn=get_name_from_obj
+145 0
+cfn=<built-in method builtins.hasattr>
+calls=56 0
+145 0
+cfn=<method 'format' of 'str' objects>
+calls=28 0
+145 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/utils.py
+fn=clear_collection
+250 0
+cfl=/usr/lib/python3.8/threading.py
+cfn=current_thread
+calls=2 1306
+250 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/timer.py
+fn=process_request
+61 1
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+cfn=process_request
+calls=1 181
+61 514
+cfn=<built-in method time.time>
+calls=1 0
+61 0
+cfn=<built-in method resource.getrusage>
+calls=1 0
+61 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/headers.py
+fn=<genexpr>
+39 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/headers.py
+cfn=is_http_header
+calls=102 57
+39 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/headers.py
+cfn=unmangle
+calls=9 63
+39 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/headers.py
+fn=<genexpr>
+44 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/headers.py
+fn=process_request
+37 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+cfn=process_request
+calls=1 181
+37 513
+cfn=<built-in method builtins.sorted>
+calls=1 0
+37 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/headers.py
+cfn=<genexpr>
+calls=10 39
+37 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/headers.py
+cfn=<genexpr>
+calls=16 44
+37 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+cfn=record_stats
+calls=1 150
+37 0
+cfn=<method 'items' of 'dict' objects>
+calls=1 0
+37 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/headers.py
+fn=is_http_header
+57 0
+cfn=<method 'startswith' of 'str' objects>
+calls=102 0
+57 0
+cfn=<built-in method builtins.isinstance>
+calls=102 0
+57 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/headers.py
+fn=unmangle
+63 0
+cfn=<method 'title' of 'str' objects>
+calls=9 0
+63 0
+cfn=<method 'replace' of 'str' objects>
+calls=9 0
+63 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/sql/panel.py
+fn=<dictcomp>
+58 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/db/utils.py
+cfn=__getitem__
+calls=1 207
+58 0
+cfn=<built-in method builtins.len>
+calls=1 0
+58 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/db/backends/base/base.py
+cfn=queries
+calls=1 156
+58 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/sql/panel.py
+fn=__init__
+56 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/db/utils.py
+cfn=__iter__
+calls=1 225
+56 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/__init__.py
+cfn=__init__
+calls=1 12
+56 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/sql/panel.py
+cfn=<dictcomp>
+calls=1 58
+56 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/sql/panel.py
+fn=enable_instrumentation
+139 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/panels/sql/tracking.py
+cfn=wrap_cursor
+calls=1 41
+139 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/db/utils.py
+cfn=all
+calls=1 228
+139 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/auth/middleware.py
+fn=process_request
+16 0
+cfn=<built-in method builtins.hasattr>
+calls=1 0
+16 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/functional.py
+cfn=__init__
+calls=1 363
+16 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/middleware/security.py
+fn=process_request
+23 0
+cfn=<method 'lstrip' of 'str' objects>
+calls=1 0
+23 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/sessions/middleware.py
+fn=process_request
+22 0
+cfn=<method 'get' of 'dict' objects>
+calls=1 0
+22 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/sessions/backends/db.py
+cfn=__init__
+calls=1 16
+22 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/functional.py
+cfn=__get__
+calls=1 40
+22 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/sessions/backends/base.py
+fn=__init__
+48 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/sessions/backends/base.py
+cfn=_set_session_key
+calls=1 214
+48 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/module_loading.py
+cfn=import_string
+calls=1 7
+48 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/sessions/backends/base.py
+fn=_validate_session_key
+204 0
+cfn=<built-in method builtins.len>
+calls=1 0
+204 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/sessions/backends/base.py
+fn=_set_session_key
+214 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/sessions/backends/base.py
+cfn=_validate_session_key
+calls=1 204
+214 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/middleware/common.py
+fn=process_request
+34 0
+cfn=<method 'get' of 'dict' objects>
+calls=1 0
+34 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/http/request.py
+cfn=get_host
+calls=1 119
+34 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/middleware/common.py
+cfn=should_redirect_with_slash
+calls=1 63
+34 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/http/request.py
+cfn=get_full_path
+calls=2 147
+34 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/middleware/common.py
+fn=should_redirect_with_slash
+63 0
+cfn=<method 'endswith' of 'str' objects>
+calls=1 0
+63 0
+cfn=<built-in method builtins.getattr>
+calls=1 0
+63 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/base.py
+cfn=is_valid_path
+calls=1 147
+63 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/messages/middleware.py
+fn=process_request
+11 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/messages/storage/__init__.py
+cfn=default_storage
+calls=1 5
+11 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/staticfiles/handlers.py
+fn=_should_handle
+32 0
+cfn=<method 'startswith' of 'str' objects>
+calls=1 0
+32 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/staticfiles/handlers.py
+fn=__call__
+74 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/wsgi.py
+cfn=get_path_info
+calls=1 152
+74 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/staticfiles/handlers.py
+cfn=_should_handle
+calls=1 32
+74 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/wsgi.py
+cfn=__call__
+calls=1 129
+74 557
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/base.py
+fn=get_response
+124 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/exception.py
+cfn=inner
+calls=1 44
+124 556
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/base.py
+cfn=set_urlconf
+calls=1 127
+124 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/wsgi.py
+fn=__init__
+17 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/exception.py
+fn=inner
+44 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/deprecation.py
+cfn=__call__
+calls=7 107
+44 556
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/debug_toolbar/middleware.py
+cfn=__call__
+calls=1 44
+44 555
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/wsgi.py
+fn=__init__
+65 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/wsgi.py
+cfn=get_path_info
+calls=1 152
+65 0
+cfn=<method 'get' of 'dict' objects>
+calls=1 0
+65 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/wsgi.py
+cfn=get_script_name
+calls=1 159
+65 0
+cfn=<method 'rstrip' of 'str' objects>
+calls=1 0
+65 0
+cfn=<method 'replace' of 'str' objects>
+calls=1 0
+65 0
+cfn=<method 'upper' of 'str' objects>
+calls=1 0
+65 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/http/request.py
+cfn=_set_content_type_params
+calls=1 89
+65 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/wsgi.py
+cfn=__init__
+calls=1 17
+65 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/wsgi.py
+fn=COOKIES
+108 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/wsgi.py
+cfn=get_str_from_wsgi
+calls=1 203
+108 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/http/cookie.py
+cfn=parse_cookie
+calls=1 10
+108 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/wsgi.py
+fn=__call__
+129 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/wsgi.py
+cfn=get_script_name
+calls=1 159
+129 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/base.py
+cfn=set_script_prefix
+calls=1 99
+129 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/dispatch/dispatcher.py
+cfn=send
+calls=1 156
+129 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/wsgi.py
+cfn=__init__
+calls=1 65
+129 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/base.py
+cfn=get_response
+calls=1 124
+129 557
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/wsgi.py
+fn=get_path_info
+152 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/wsgi.py
+cfn=get_bytes_from_wsgi
+calls=2 190
+152 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/encoding.py
+cfn=repercent_broken_unicode
+calls=2 226
+152 0
+cfn=<method 'decode' of 'bytes' objects>
+calls=2 0
+152 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/wsgi.py
+fn=get_script_name
+159 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/wsgi.py
+cfn=get_bytes_from_wsgi
+calls=6 190
+159 0
+cfn=<method 'decode' of 'bytes' objects>
+calls=2 0
+159 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/wsgi.py
+fn=get_bytes_from_wsgi
+190 0
+cfn=<method 'get' of 'dict' objects>
+calls=9 0
+190 0
+cfn=<method 'encode' of 'str' objects>
+calls=9 0
+190 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/wsgi.py
+fn=get_str_from_wsgi
+203 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/wsgi.py
+cfn=get_bytes_from_wsgi
+calls=1 190
+203 0
+cfn=<method 'decode' of 'bytes' objects>
+calls=1 0
+203 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/db/backends/base/base.py
+fn=queries
+156 0
+cfn=<built-in method builtins.len>
+calls=1 0
+156 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/db/backends/base/base.py
+fn=close_if_unusable_or_obsolete
+502 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/messages/storage/__init__.py
+fn=default_storage
+5 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/module_loading.py
+cfn=import_string
+calls=1 7
+5 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/messages/storage/fallback.py
+cfn=__init__
+calls=1 13
+5 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+fn=<dictcomp>
+163 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+fn=match
+155 0
+cfn=<method 'search' of 're.Pattern' objects>
+calls=2 0
+155 0
+cfn=<method 'groupdict' of 're.Match' objects>
+calls=2 0
+155 0
+cfn=<method 'groups' of 're.Match' objects>
+calls=1 0
+155 0
+cfn=<method 'items' of 'dict' objects>
+calls=2 0
+155 0
+cfn=<method 'end' of 're.Match' objects>
+calls=2 0
+155 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+cfn=<dictcomp>
+calls=2 163
+155 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+fn=__str__
+195 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+fn=match
+257 0
+cfn=<method 'search' of 're.Pattern' objects>
+calls=17 0
+257 0
+cfn=<method 'groupdict' of 're.Match' objects>
+calls=1 0
+257 0
+cfn=<method 'items' of 'dict' objects>
+calls=1 0
+257 0
+cfn=<method 'end' of 're.Match' objects>
+calls=1 0
+257 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+fn=resolve
+353 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+cfn=match
+calls=1 155
+353 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+cfn=match
+calls=10 257
+353 0
+cfn=<method 'update' of 'dict' objects>
+calls=1 0
+353 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+cfn=__str__
+calls=1 195
+353 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+cfn=__init__
+calls=1 33
+353 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+fn=_join_route
+525 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+fn=<genexpr>
+551 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+fn=resolve
+539 0
+cfn=<method 'get' of 'dict' objects>
+calls=7 0
+539 0
+cfn=<method 'append' of 'list' objects>
+calls=16 0
+539 0
+cfn=<built-in method builtins.isinstance>
+calls=1 0
+539 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+cfn=resolve
+calls=7 539
+539 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+cfn=match
+calls=1 155
+539 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+cfn=match
+calls=7 257
+539 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+cfn=resolve
+calls=11 353
+539 0
+cfn=<method 'extend' of 'list' objects>
+calls=1 0
+539 0
+cfn=<method 'update' of 'dict' objects>
+calls=1 0
+539 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+cfn=__init__
+calls=1 33
+539 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+cfn=_join_route
+calls=1 525
+539 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/http.py
+fn=is_same_domain
+283 0
+cfn=<method 'lower' of 'str' objects>
+calls=2 0
+283 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+fn=get_resolver
+67 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/signing.py
+fn=__init__
+150 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/functional.py
+cfn=inner
+calls=1 238
+150 0
+cfn=<method 'match' of 're.Pattern' objects>
+calls=1 0
+150 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/signing.py
+fn=get_cookie_signer
+75 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/module_loading.py
+cfn=import_string
+calls=1 7
+75 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/encoding.py
+cfn=force_bytes
+calls=1 82
+75 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/signing.py
+cfn=__init__
+calls=1 150
+75 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/http/request.py
+fn=_set_content_type_params
+89 0
+cfn=<method 'get' of 'dict' objects>
+calls=1 0
+89 0
+cfl=/usr/lib/python3.8/cgi.py
+cfn=parse_header
+calls=1 223
+89 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/http/request.py
+fn=_get_raw_host
+100 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/http/request.py
+fn=get_host
+119 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/http/request.py
+cfn=_get_raw_host
+calls=1 100
+119 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/http/request.py
+cfn=split_domain_port
+calls=1 632
+119 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/http/request.py
+cfn=validate_host
+calls=1 654
+119 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/http/request.py
+fn=get_full_path
+147 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/http/request.py
+cfn=_get_full_path
+calls=2 153
+147 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/http/request.py
+fn=_get_full_path
+153 0
+cfn=<method 'get' of 'dict' objects>
+calls=2 0
+153 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/encoding.py
+cfn=escape_uri_path
+calls=2 204
+153 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/http/request.py
+fn=split_domain_port
+632 0
+cfn=<method 'endswith' of 'str' objects>
+calls=1 0
+632 0
+cfn=<built-in method builtins.len>
+calls=1 0
+632 0
+cfn=<method 'rsplit' of 'str' objects>
+calls=1 0
+632 0
+cfn=<method 'lower' of 'str' objects>
+calls=1 0
+632 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/functional.py
+cfn=inner
+calls=1 238
+632 0
+cfn=<method 'match' of 're.Pattern' objects>
+calls=1 0
+632 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/http/request.py
+fn=<genexpr>
+669 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/http.py
+cfn=is_same_domain
+calls=2 283
+669 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/http/request.py
+fn=validate_host
+654 0
+cfn=<built-in method builtins.any>
+calls=1 0
+654 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/http/request.py
+cfn=<genexpr>
+calls=1 669
+654 0
+
+fl=/usr/lib/python3.8/cgi.py
+fn=_parseparam
+211 0
+cfn=<method 'find' of 'str' objects>
+calls=1 0
+211 0
+cfn=<built-in method builtins.len>
+calls=1 0
+211 0
+cfn=<method 'strip' of 'str' objects>
+calls=1 0
+211 0
+
+fl=/usr/lib/python3.8/cgi.py
+fn=parse_header
+223 0
+cfl=/usr/lib/python3.8/cgi.py
+cfn=_parseparam
+calls=2 211
+223 0
+
+fn=<method 'enable' of '_lsprof.Profiler' objects>
+0  513
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/base.py
+fn=resolve
+22 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/base.py
+cfn=get_urlconf
+calls=1 139
+22 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+cfn=resolve
+calls=1 539
+22 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+cfn=get_resolver
+calls=1 67
+22 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/base.py
+fn=set_script_prefix
+99 0
+cfn=<method 'endswith' of 'str' objects>
+calls=1 0
+99 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/asgiref/local.py
+cfn=__setattr__
+calls=1 109
+99 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/base.py
+fn=set_urlconf
+127 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/asgiref/local.py
+cfn=__setattr__
+calls=1 109
+127 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/base.py
+fn=get_urlconf
+139 0
+cfn=<built-in method builtins.getattr>
+calls=1 0
+139 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/base.py
+fn=is_valid_path
+147 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/base.py
+cfn=resolve
+calls=1 22
+147 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+fn=<listcomp>
+44 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+fn=__init__
+33 0
+cfn=<built-in method builtins.hasattr>
+calls=2 0
+33 0
+cfn=<method 'join' of 'str' objects>
+calls=6 0
+33 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+cfn=<listcomp>
+calls=1 42
+33 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+cfn=<listcomp>
+calls=1 44
+33 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/urls/resolvers.py
+fn=<listcomp>
+42 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/http/cookie.py
+fn=parse_cookie
+10 0
+cfn=<method 'strip' of 'str' objects>
+calls=12 0
+10 0
+cfn=<method 'split' of 'str' objects>
+calls=7 0
+10 0
+cfl=/usr/lib/python3.8/http/cookies.py
+cfn=_unquote
+calls=6 189
+10 0
+
+fl=/usr/lib/python3.8/http/cookies.py
+fn=_unquote
+189 0
+cfn=<built-in method builtins.len>
+calls=6 0
+189 0
+
+fn=<built-in method resource.getrusage>
+0  0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/cache/__init__.py
+fn=__init__
+63 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/asgiref/local.py
+cfn=__init__
+calls=1 35
+63 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/db/__init__.py
+fn=reset_queries
+45 0
+cfn=<method 'clear' of 'collections.deque' objects>
+calls=1 0
+45 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/db/utils.py
+cfn=all
+calls=1 228
+45 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/db/__init__.py
+fn=close_old_connections
+55 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/db/utils.py
+cfn=all
+calls=1 228
+55 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/db/backends/base/base.py
+cfn=close_if_unusable_or_obsolete
+calls=1 502
+55 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/db/utils.py
+fn=__getitem__
+207 0
+cfn=<built-in method builtins.hasattr>
+calls=4 0
+207 0
+cfn=<built-in method builtins.getattr>
+calls=4 0
+207 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/db/utils.py
+fn=__iter__
+225 0
+cfn=<built-in method builtins.iter>
+calls=4 0
+225 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/db/utils.py
+fn=<listcomp>
+229 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/db/utils.py
+cfn=__getitem__
+calls=3 207
+229 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/db/utils.py
+fn=all
+228 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/db/utils.py
+cfn=__iter__
+calls=3 225
+228 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/db/utils.py
+cfn=<listcomp>
+calls=3 229
+228 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/dispatch/dispatcher.py
+fn=_make_id
+9 0
+cfn=<built-in method builtins.hasattr>
+calls=7 0
+9 0
+cfn=<built-in method builtins.id>
+calls=10 0
+9 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/dispatch/dispatcher.py
+fn=<genexpr>
+113 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/dispatch/dispatcher.py
+fn=connect
+53 0
+cfn=<built-in method builtins.hasattr>
+calls=6 0
+53 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/dispatch/dispatcher.py
+cfn=_clear_dead_receivers
+calls=3 216
+53 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/dispatch/dispatcher.py
+cfn=_make_id
+calls=6 9
+53 0
+cfn=<method 'append' of 'list' objects>
+calls=3 0
+53 0
+cfn=<built-in method builtins.any>
+calls=3 0
+53 0
+cfl=<frozen importlib._bootstrap>
+cfn=_handle_fromlist
+calls=3 1017
+53 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/conf/__init__.py
+cfn=configured
+calls=3 139
+53 0
+cfn=<built-in method builtins.callable>
+calls=3 0
+53 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/inspect.py
+cfn=func_accepts_kwargs
+calls=3 36
+53 1
+cfl=/usr/lib/python3.8/weakref.py
+cfn=__new__
+calls=3 44
+53 0
+cfl=/usr/lib/python3.8/weakref.py
+cfn=__init__
+calls=3 517
+53 0
+cfn=<method 'clear' of 'dict' objects>
+calls=3 0
+53 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/dispatch/dispatcher.py
+fn=<listcomp>
+177 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/db/__init__.py
+cfn=reset_queries
+calls=1 45
+177 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/db/__init__.py
+cfn=close_old_connections
+calls=1 55
+177 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/dispatch/dispatcher.py
+fn=send
+156 0
+cfn=<method 'get' of 'dict' objects>
+calls=1 0
+156 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/dispatch/dispatcher.py
+cfn=_live_receivers
+calls=1 225
+156 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/dispatch/dispatcher.py
+cfn=<listcomp>
+calls=1 177
+156 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/dispatch/dispatcher.py
+fn=_clear_dead_receivers
+216 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/dispatch/dispatcher.py
+fn=_live_receivers
+225 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/dispatch/dispatcher.py
+cfn=_clear_dead_receivers
+calls=1 216
+225 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/dispatch/dispatcher.py
+cfn=_make_id
+calls=1 9
+225 0
+cfn=<method 'append' of 'list' objects>
+calls=4 0
+225 0
+cfn=<built-in method builtins.isinstance>
+calls=2 0
+225 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/inspect.py
+fn=<genexpr>
+37 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=kind
+calls=17 2539
+37 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/inspect.py
+fn=func_accepts_kwargs
+36 0
+cfn=<built-in method builtins.any>
+calls=3 0
+36 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=signature
+calls=3 3091
+36 1
+cfl=/usr/lib/python3.8/inspect.py
+cfn=parameters
+calls=3 2845
+36 0
+cfn=<method 'values' of 'mappingproxy' objects>
+calls=3 0
+36 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/inspect.py
+cfn=<genexpr>
+calls=3 37
+36 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/asgiref/local.py
+fn=<genexpr>
+43 0
+cfl=/usr/lib/python3.8/random.py
+cfn=choice
+calls=8 285
+43 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/asgiref/local.py
+fn=__init__
+35 0
+cfl=/usr/lib/python3.8/threading.py
+cfn=RLock
+calls=1 81
+35 0
+cfl=/usr/lib/python3.8/_weakrefset.py
+cfn=__init__
+calls=1 36
+35 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/asgiref/local.py
+cfn=__setattr__
+calls=4 109
+35 0
+cfn=<built-in method builtins.id>
+calls=1 0
+35 0
+cfn=<method 'join' of 'str' objects>
+calls=1 0
+35 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/asgiref/local.py
+fn=_get_context_id
+46 0
+cfl=<frozen importlib._bootstrap>
+cfn=parent
+calls=11 389
+46 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/asgiref/sync.py
+cfn=get_current_task
+calls=11 341
+46 0
+cfl=/usr/lib/python3.8/threading.py
+cfn=current_thread
+calls=11 1306
+46 0
+cfn=<built-in method sys.getrecursionlimit>
+calls=3 0
+46 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/asgiref/local.py
+fn=_get_storage
+82 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/asgiref/local.py
+cfn=_get_context_id
+calls=11 46
+82 0
+cfn=<built-in method builtins.hasattr>
+calls=11 0
+82 0
+cfn=<built-in method builtins.getattr>
+calls=11 0
+82 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/asgiref/local.py
+fn=__del__
+89 0
+cfl=/usr/lib/python3.8/_weakrefset.py
+cfn=__iter__
+calls=1 58
+89 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/asgiref/local.py
+fn=__getattr__
+101 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/asgiref/local.py
+cfn=_get_storage
+calls=9 82
+101 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/asgiref/local.py
+fn=__setattr__
+109 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/asgiref/local.py
+cfn=_get_storage
+calls=2 82
+109 0
+
+fl=/usr/lib/python3.8/random.py
+fn=_randbelow_with_getrandbits
+250 0
+cfn=<method 'bit_length' of 'int' objects>
+calls=8 0
+250 0
+cfn=<method 'getrandbits' of '_random.Random' objects>
+calls=10 0
+250 0
+
+fl=/usr/lib/python3.8/random.py
+fn=choice
+285 0
+cfl=/usr/lib/python3.8/random.py
+cfn=_randbelow_with_getrandbits
+calls=8 250
+285 0
+cfn=<built-in method builtins.len>
+calls=8 0
+285 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/functional.py
+fn=inner
+238 0
+cfn=<built-in method builtins.getattr>
+calls=2 0
+238 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/functional.py
+fn=__init__
+257 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/functional.py
+cfn=__setattr__
+calls=2 264
+257 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/functional.py
+fn=__setattr__
+264 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/functional.py
+fn=__init__
+363 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/functional.py
+cfn=__init__
+calls=1 257
+363 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/asgiref/sync.py
+fn=get_current_task
+341 0
+cfn=<built-in method builtins.hasattr>
+calls=11 0
+341 0
+cfl=/usr/lib/python3.8/asyncio/tasks.py
+cfn=current_task
+calls=11 34
+341 0
+
+fl=/usr/lib/python3.8/asyncio/tasks.py
+fn=current_task
+34 0
+cfn=<built-in method _asyncio.get_running_loop>
+calls=11 0
+34 0
+
+fl=/usr/lib/python3.8/asyncio/coroutines.py
+fn=iscoroutinefunction
+164 0
+cfn=<built-in method builtins.getattr>
+calls=7 0
+164 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=iscoroutinefunction
+calls=7 189
+164 0
+
+fl=/usr/lib/python3.8/inspect.py
+fn=ismethod
+80 0
+cfn=<built-in method builtins.isinstance>
+calls=7 0
+80 0
+
+fl=/usr/lib/python3.8/inspect.py
+fn=isfunction
+158 0
+cfn=<built-in method builtins.isinstance>
+calls=13 0
+158 0
+
+fl=/usr/lib/python3.8/inspect.py
+fn=_has_code_flag
+171 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=ismethod
+calls=7 80
+171 0
+cfl=/usr/lib/python3.8/functools.py
+cfn=_unwrap_partial
+calls=7 429
+171 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=isfunction
+calls=7 158
+171 0
+
+fl=/usr/lib/python3.8/inspect.py
+fn=iscoroutinefunction
+189 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=_has_code_flag
+calls=7 171
+189 0
+
+fl=/usr/lib/python3.8/inspect.py
+fn=_is_wrapper
+513 0
+cfn=<built-in method builtins.hasattr>
+calls=3 0
+513 0
+
+fl=/usr/lib/python3.8/inspect.py
+fn=unwrap
+493 0
+cfn=<built-in method sys.getrecursionlimit>
+calls=3 0
+493 0
+cfn=<built-in method builtins.id>
+calls=3 0
+493 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=_is_wrapper
+calls=3 513
+493 0
+
+fl=/usr/lib/python3.8/inspect.py
+fn=_signature_bound_method
+1800 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=parameters
+calls=3 2845
+1800 0
+cfn=<method 'values' of 'mappingproxy' objects>
+calls=3 0
+1800 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=kind
+calls=6 2539
+1800 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=replace
+calls=3 2853
+1800 0
+
+fl=/usr/lib/python3.8/inspect.py
+fn=_signature_from_function
+2112 0
+cfn=<method 'get' of 'dict' objects>
+calls=23 0
+2112 0
+cfn=<built-in method builtins.getattr>
+calls=3 0
+2112 0
+cfn=<method 'append' of 'list' objects>
+calls=20 0
+2112 0
+cfn=<built-in method builtins.len>
+calls=1 0
+2112 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=isfunction
+calls=3 158
+2112 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=__init__
+calls=20 2477
+2112 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=__init__
+calls=3 2760
+2112 0
+
+fl=/usr/lib/python3.8/inspect.py
+fn=_signature_from_callable
+2206 0
+cfn=<built-in method builtins.isinstance>
+calls=9 0
+2206 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=isfunction
+calls=3 158
+2206 0
+cfn=<built-in method builtins.callable>
+calls=6 0
+2206 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=_signature_from_callable
+calls=3 2206
+2206 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=unwrap
+calls=3 493
+2206 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=_signature_from_function
+calls=3 2112
+2206 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=_signature_bound_method
+calls=3 1800
+2206 0
+
+fl=/usr/lib/python3.8/inspect.py
+fn=__init__
+2477 0
+cfn=<built-in method builtins.isinstance>
+calls=20 0
+2477 0
+cfl=/usr/lib/python3.8/enum.py
+cfn=__call__
+calls=20 283
+2477 0
+cfn=<method 'isidentifier' of 'str' objects>
+calls=20 0
+2477 0
+
+fl=/usr/lib/python3.8/inspect.py
+fn=name
+2527 0
+
+fl=/usr/lib/python3.8/inspect.py
+fn=default
+2531 0
+
+fl=/usr/lib/python3.8/inspect.py
+fn=kind
+2539 0
+
+fl=/usr/lib/python3.8/inspect.py
+fn=<genexpr>
+2809 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=name
+calls=20 2527
+2809 0
+
+fl=/usr/lib/python3.8/inspect.py
+fn=__init__
+2760 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=<genexpr>
+calls=23 2809
+2760 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=name
+calls=17 2527
+2760 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=kind
+calls=17 2539
+2760 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=default
+calls=14 2531
+2760 0
+
+fl=/usr/lib/python3.8/inspect.py
+fn=from_callable
+2839 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=_signature_from_callable
+calls=3 2206
+2839 1
+
+fl=/usr/lib/python3.8/inspect.py
+fn=parameters
+2845 0
+
+fl=/usr/lib/python3.8/inspect.py
+fn=replace
+2853 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=__init__
+calls=3 2760
+2853 0
+
+fl=/usr/lib/python3.8/inspect.py
+fn=signature
+3091 0
+cfl=/usr/lib/python3.8/inspect.py
+cfn=from_callable
+calls=3 2839
+3091 1
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/encoding.py
+fn=escape_uri_path
+204 0
+cfl=/usr/lib/python3.8/urllib/parse.py
+cfn=quote
+calls=2 787
+204 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/encoding.py
+fn=repercent_broken_unicode
+226 0
+cfn=<method 'decode' of 'bytes' objects>
+calls=2 0
+226 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/functional.py
+fn=__get__
+40 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/wsgi.py
+cfn=COOKIES
+calls=1 108
+40 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/deprecation.py
+fn=__call__
+107 0
+cfn=<built-in method builtins.hasattr>
+calls=7 0
+107 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/core/handlers/exception.py
+cfn=inner
+calls=7 44
+107 556
+cfl=/usr/lib/python3.8/asyncio/coroutines.py
+cfn=iscoroutinefunction
+calls=7 164
+107 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/middleware/security.py
+cfn=process_request
+calls=1 23
+107 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/sessions/middleware.py
+cfn=process_request
+calls=1 22
+107 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/middleware/common.py
+cfn=process_request
+calls=1 34
+107 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/auth/middleware.py
+cfn=process_request
+calls=1 16
+107 0
+cfl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/contrib/messages/middleware.py
+cfn=process_request
+calls=1 11
+107 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/encoding.py
+fn=force_bytes
+82 0
+cfn=<method 'encode' of 'str' objects>
+calls=1 0
+82 0
+cfn=<built-in method builtins.isinstance>
+calls=2 0
+82 0
+
+fl=/usr/lib/python3.8/urllib/parse.py
+fn=quote
+787 0
+cfn=<method 'encode' of 'str' objects>
+calls=2 0
+787 0
+cfn=<built-in method builtins.isinstance>
+calls=2 0
+787 0
+cfl=/usr/lib/python3.8/urllib/parse.py
+cfn=quote_from_bytes
+calls=2 858
+787 0
+
+fl=/usr/lib/python3.8/urllib/parse.py
+fn=quote_from_bytes
+858 0
+cfn=<method 'encode' of 'str' objects>
+calls=2 0
+858 0
+cfn=<method 'decode' of 'bytes' objects>
+calls=2 0
+858 0
+cfn=<built-in method builtins.isinstance>
+calls=4 0
+858 0
+cfn=<method 'rstrip' of 'bytes' objects>
+calls=2 0
+858 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/conf/__init__.py
+fn=configured
+139 0
+
+fl=/home/radif/GeekBrains/django_virt/lib/python3.8/site-packages/django/utils/module_loading.py
+fn=import_string
+7 0
+cfn=<built-in method builtins.getattr>
+calls=3 0
+7 0
+cfn=<method 'rsplit' of 'str' objects>
+calls=3 0
+7 0
+cfl=/usr/lib/python3.8/importlib/__init__.py
+cfn=import_module
+calls=3 109
+7 0
+
+fl=/home/radif/GeekBrains/Django_optimization_tools/geekshop/settings.py
+fn=<lambda>
+72 0
+
+fl=/usr/lib/python3.8/weakref.py
+fn=__new__
+44 0
+cfn=<built-in method __new__ of type object at 0x907780>
+calls=3 0
+44 0
+
+fl=/usr/lib/python3.8/weakref.py
+fn=__init__
+517 0
+cfn=<built-in method builtins.len>
+calls=3 0
+517 0
+cfn=<built-in method builtins.next>
+calls=3 0
+517 0
+
+fl=/usr/lib/python3.8/importlib/__init__.py
+fn=import_module
+109 0
+cfn=<method 'startswith' of 'str' objects>
+calls=3 0
+109 0
+cfl=<frozen importlib._bootstrap>
+cfn=_gcd_import
+calls=3 1002
+109 0
+
+fl=/usr/lib/python3.8/threading.py
+fn=current_thread
+1306 0
+cfn=<built-in method _thread.get_ident>
+calls=13 0
+1306 0
+
+fl=/usr/lib/python3.8/_weakrefset.py
+fn=__init__
+16 0
+
+fl=/usr/lib/python3.8/_weakrefset.py
+fn=__enter__
+20 0
+cfn=<method 'add' of 'set' objects>
+calls=1 0
+20 0
+
+fl=/usr/lib/python3.8/_weakrefset.py
+fn=__exit__
+26 0
+cfn=<method 'remove' of 'set' objects>
+calls=1 0
+26 0
+cfl=/usr/lib/python3.8/_weakrefset.py
+cfn=_commit_removals
+calls=1 52
+26 0
+
+fl=/usr/lib/python3.8/_weakrefset.py
+fn=__init__
+36 0
+
+fl=/usr/lib/python3.8/_weakrefset.py
+fn=_commit_removals
+52 0
+
+fl=/usr/lib/python3.8/_weakrefset.py
+fn=__iter__
+58 0
+cfl=/usr/lib/python3.8/_weakrefset.py
+cfn=__init__
+calls=1 16
+58 0
+cfl=/usr/lib/python3.8/_weakrefset.py
+cfn=__enter__
+calls=1 20
+58 0
+cfl=/usr/lib/python3.8/_weakrefset.py
+cfn=__exit__
+calls=1 26
+58 0
+
+fl=/usr/lib/python3.8/functools.py
+fn=_unwrap_partial
+429 0
+cfn=<built-in method builtins.isinstance>
+calls=7 0
+429 0
+
+fl=/usr/lib/python3.8/enum.py
+fn=__new__
+562 0
+
+fl=/usr/lib/python3.8/enum.py
+fn=__call__
+283 0
+cfl=/usr/lib/python3.8/enum.py
+cfn=__new__
+calls=20 562
+283 0
+
+fl=/usr/lib/python3.8/threading.py
+fn=RLock
+81 0
+
+fn=<built-in method _asyncio.get_running_loop>
+0  0
+
+fl=<frozen importlib._bootstrap>
+fn=__init__
+58 0
+cfn=<built-in method _thread.allocate_lock>
+calls=12 0
+58 0
+
+fl=<frozen importlib._bootstrap>
+fn=acquire
+78 0
+cfn=<built-in method _thread.get_ident>
+calls=6 0
+78 0
+
+fl=<frozen importlib._bootstrap>
+fn=release
+103 0
+cfn=<built-in method _thread.get_ident>
+calls=6 0
+103 0
+
+fl=<frozen importlib._bootstrap>
+fn=__init__
+143 0
+
+fl=<frozen importlib._bootstrap>
+fn=__enter__
+147 0
+cfl=<frozen importlib._bootstrap>
+cfn=_get_module_lock
+calls=3 157
+147 0
+cfl=<frozen importlib._bootstrap>
+cfn=acquire
+calls=3 78
+147 0
+
+fl=<frozen importlib._bootstrap>
+fn=__exit__
+151 0
+cfl=<frozen importlib._bootstrap>
+cfn=release
+calls=3 103
+151 0
+
+fl=<frozen importlib._bootstrap>
+fn=cb
+176 0
+cfn=<method 'get' of 'dict' objects>
+calls=6 0
+176 0
+cfn=<built-in method _imp.acquire_lock>
+calls=6 0
+176 0
+cfn=<built-in method _imp.release_lock>
+calls=6 0
+176 0
+
+fl=<frozen importlib._bootstrap>
+fn=_get_module_lock
+157 0
+cfn=<built-in method _imp.acquire_lock>
+calls=6 0
+157 0
+cfl=<frozen importlib._bootstrap>
+cfn=__init__
+calls=6 58
+157 0
+cfn=<built-in method _imp.release_lock>
+calls=6 0
+157 0
+
+fl=<frozen importlib._bootstrap>
+fn=_lock_unlock_module
+194 0
+cfl=<frozen importlib._bootstrap>
+cfn=_get_module_lock
+calls=3 157
+194 0
+cfl=<frozen importlib._bootstrap>
+cfn=acquire
+calls=3 78
+194 0
+cfl=<frozen importlib._bootstrap>
+cfn=release
+calls=3 103
+194 0
+
+fl=<frozen importlib._bootstrap>
+fn=parent
+389 0
+cfn=<method 'rpartition' of 'str' objects>
+calls=11 0
+389 0
+
+fl=<frozen importlib._bootstrap>
+fn=_sanity_check
+937 0
+cfn=<built-in method builtins.isinstance>
+calls=3 0
+937 0
+
+fl=<frozen importlib._bootstrap>
+fn=_find_and_load
+986 0
+cfn=<method 'get' of 'dict' objects>
+calls=3 0
+986 0
+cfl=<frozen importlib._bootstrap>
+cfn=__init__
+calls=3 143
+986 0
+cfl=<frozen importlib._bootstrap>
+cfn=__enter__
+calls=3 147
+986 0
+cfl=<frozen importlib._bootstrap>
+cfn=_lock_unlock_module
+calls=3 194
+986 0
+cfl=<frozen importlib._bootstrap>
+cfn=__exit__
+calls=3 151
+986 0
+cfl=<frozen importlib._bootstrap>
+cfn=cb
+calls=6 176
+986 0
+
+fl=<frozen importlib._bootstrap>
+fn=_gcd_import
+1002 0
+cfl=<frozen importlib._bootstrap>
+cfn=_sanity_check
+calls=3 937
+1002 0
+cfl=<frozen importlib._bootstrap>
+cfn=_find_and_load
+calls=3 986
+1002 0
+
+fl=<frozen importlib._bootstrap>
+fn=_handle_fromlist
+1017 0
+cfn=<built-in method builtins.hasattr>
+calls=3 0
+1017 0
+cfn=<built-in method builtins.isinstance>
+calls=3 0
+1017 0
+

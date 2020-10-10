@@ -1,0 +1,2 @@
+http://localhost:8000/auth/login/ POST username=django&password=geekbrains
+

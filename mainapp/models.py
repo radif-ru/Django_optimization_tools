@@ -4,7 +4,7 @@ from django.db import models
 class ProductCategory(models.Model):
     name = models.CharField(verbose_name='имя категории', max_length=128)
     description = models.TextField(verbose_name='описание категории', blank=True)
-    is_active = models.BooleanField(verbose_name='активность', default=True)
+    is_active = models.BooleanField(verbose_name='активность', default=True, db_index=True)
     modified_date = models.DateTimeField(
         verbose_name='дата изменения', auto_now=True)
 
