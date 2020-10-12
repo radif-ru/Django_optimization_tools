@@ -10,11 +10,11 @@ from mainapp.models import ProductCategory, Product
 from geekshop.settings import BASE_DIR, JSON_PATH
 
 with open(os.path.join(BASE_DIR, f'{JSON_PATH}/links_menu.json'),
-          encoding="utf-8") as f:
+          encoding="utf-8", errors='ignore') as f:
     LINKS_MENU = json.loads(f.read())
 
 with open(os.path.join(BASE_DIR, f'{JSON_PATH}/contact_locations.json'),
-          encoding="utf-8") as f:
+          encoding="utf-8", errors='ignore') as f:
     LOCATIONS = json.loads(f.read())
 
 

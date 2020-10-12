@@ -26,9 +26,10 @@ class ShopUser(AbstractUser):
 
     @cached_property
     def basket_items(self):
-        return self.user_basket.all()
+        return self.user_basket.select_related('product').all()
 
     def basket_cost(self):
+        # print(self.basket_items.query)  # запрос на низком уровне
         return sum(item.product.price * item.quantity for item in self.basket_items)
 
     def basket_total_quantity(self):

@@ -22,7 +22,8 @@ class OrderItemForm(FormControlMixin, forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['product'].queryset = Product.get_items()
+        print(Product.get_items().query)
+        self.fields['product'].queryset = Product.get_items().select_related('category')
 
     class Meta:
         model = OrderItem

@@ -27,7 +27,7 @@ class Product(models.Model):
     description = models.TextField('описание продукта', blank=True)
     price = models.DecimalField('цена продукта', max_digits=8, decimal_places=2, default=0)
     quantity = models.PositiveIntegerField('количество на складе', default=0)
-    is_active = models.BooleanField(verbose_name='активность', default=True)
+    is_active = models.BooleanField(verbose_name='активность', default=True, db_index=True)
     modified_date = models.DateTimeField(
         verbose_name='дата изменения', auto_now=True)
 
@@ -43,3 +43,5 @@ class Product(models.Model):
         verbose_name = 'продукт'
         verbose_name_plural = 'продукты'
         ordering = ['-is_active', 'category', 'name']
+        # index_together = ('is_active', '...')  # индексирование по нескольким параментрам
+        # category__is_active не работает
