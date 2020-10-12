@@ -2,10 +2,12 @@ import json
 import os
 import random
 
+from django.core.cache import cache
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
 
+from geekshop import settings
 from mainapp.models import ProductCategory, Product
 from geekshop.settings import BASE_DIR, JSON_PATH
 
@@ -19,16 +21,30 @@ with open(os.path.join(BASE_DIR, f'{JSON_PATH}/contact_locations.json'),
 
 
 def get_products():
-    return Product.objects.filter(is_active=True, category__is_active=True)
+    return Product.objects.filter(is_active=True, category__is_active=True).select_related('category')
+
+
+# Пример кэширования:
+# def get_products():
+#     if settings.LOW_CACHE:
+#         key = 'products'
+#         products = cache.get(key)
+#         if products is None:
+#             products = Product.objects.filter(is_active=True, category__is_active=True).select_related('category')
+#             cache.set(key, products)
+#             return products
+#     else:
+#         return Product.objects.filter(is_active=True, category__is_active=True).select_related('category')
 
 
 def get_hot_product():
     # products = Product.objects.all()
     # return random.choice(products)
     # Оптимизация запросов (нагрузки). Получаем все id, и из рандомного достаём объект
-    products_id = get_products().values_list('id', flat=True)
-    hot_product_id = random.choice(products_id)
-    return Product.objects.get(pk=hot_product_id)
+    # products_id = get_products().values_list('id', flat=True)
+    # hot_product_id = random.choice(products_id)
+    # return Product.objects.get(pk=hot_product_id)
+    return random.choice(get_products())
 
 
 def related_products(product):
