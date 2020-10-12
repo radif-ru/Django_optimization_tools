@@ -6,6 +6,7 @@ from django.core.cache import cache
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
+from django.views.decorators.cache import cache_page, never_cache
 
 from geekshop import settings
 from mainapp.models import ProductCategory, Product
@@ -120,6 +121,13 @@ def contact(request):
     return render(request, 'mainapp/contact.html', context)
 
 
+# @cache_page(3600)
+# def catalog_ajax(request, pk, page=1):
+#     pass
+#     return render(request, 'mainapp/includes/inc__catalog.html', context)
+
+# @cache_page(3600)
+# @never_cache
 def catalog(request, pk, page=1):
     # try:
     #     category = ProductCategory.objects.get(pk=pk)

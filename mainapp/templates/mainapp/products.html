@@ -22,9 +22,8 @@
             <h3>{{ hot_product.name|title }}</h3>
             <p>горячее предложение</p>
             <p>&#8381; <span>{{ hot_product.price }}</span>/коп</p>
-            <a href="{% url 'basket:add' hot_product.pk %}" class="button button_width__red">Order
-                Us <img
-                        src="{% static 'img/arrow-white.svg' %}" alt="arrow"></a>
+            <a href="{% url 'basket:add' hot_product.pk %}" class="button button_width__red">Заказать<img
+                    src="{% static 'img/arrow-white.svg' %}" alt="arrow"></a>
             <div class="product-dealis-text">
                 <p>{{ hot_product.short_desc|capfirst }}</p>
             </div>
