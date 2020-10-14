@@ -29,7 +29,6 @@ ALLOWED_HOSTS = ['127.0.0.1',
                  'localhost',
                  'django.radif.ru',
                  'www.django.radif.ru',
-                 '45.89.230.30',
                  ]
 
 # Application definition

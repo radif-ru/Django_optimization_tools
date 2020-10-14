@@ -1,0 +1,27 @@
+{% load static %}
+
+<h2>Продукты в категории {{ category.name|capfirst }}</h2>
+<h3>({% if category.pk == 0 %}
+    Все
+{% else %}
+    {{ category.description|capfirst }}
+{% endif %})</h3>
+<div class="paginator">
+    <br>
+    {% if products.has_previous %}
+        <a class="catalog-ajax-url"
+           href="{% url 'mainapp:catalog_page' pk=category.pk page=products.previous_page_number %}">
+            <
+        </a>
+    {% endif %}
+    {% if products.paginator.num_pages > 1 %}
+        <span class="current">страница {{ products.number }} из {{ products.paginator.num_pages }}</span>
+    {% endif %}
+    {% if products.has_next %}
+        <a class="catalog-ajax-url"
+           href="{% url 'mainapp:catalog_page' pk=category.pk page=products.next_page_number %}">
+            >
+        </a>
+    {% endif %}
+</div>
+{% include 'mainapp/includes/inc__featured_new_products.html' %}

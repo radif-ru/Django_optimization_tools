@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
+from django.views.decorators.cache import cache_page
 
 import mainapp.views as mainapp
 
@@ -26,6 +27,10 @@ urlpatterns = [
     path('category/<int:pk>/catalog/', mainapp.catalog, name='catalog'),
     # re_path(r'^category/(?P<pk>\d+)/catalog/$', mainapp.catalog, name='catalog'),
     path('category/<int:pk>/catalog/<int:page>/', mainapp.catalog, name='catalog_page'),
+
+    # Кэширование каталога на час + подгрузка по Ajax
+    path('category/<int:pk>/catalog/ajax/', cache_page(3600)(mainapp.catalog_ajax)),
+    path('category/<int:pk>/catalog/<int:page>/ajax/', cache_page(3600)(mainapp.catalog_ajax)),
 
     path('showroom/', mainapp.showroom, name='showroom'),
     path('category/<int:pk>/showroom/', mainapp.showroom, name='showroom_catalog'),

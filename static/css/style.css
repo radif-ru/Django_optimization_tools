@@ -1048,10 +1048,6 @@ input[type=submit]:hover, .btn:hover {
   font-weight: bold;
   color: salmon;
 }
-.paginator:hover {
-  transition: 0.3s;
-  transform: scale(1.3);
-}
 .paginator a {
   text-decoration: none !important;
   color: saddlebrown;
