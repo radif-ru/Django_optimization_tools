@@ -1,5 +1,6 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import user_passes_test
+from django.db import connection
 from django.db.models import F
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
@@ -10,6 +11,7 @@ from django.views.generic import ListView, CreateView, UpdateView, DeleteView, D
 from adminapp.forms import AdminShopUserCreateForm, AdminShopUserUpdateForm, \
     AdminProductCategoryCreateForm, AdminProductUpdateForm
 from authapp.models import ShopUser
+from basketapp.views import db_profile_by_type
 from mainapp.models import ProductCategory, Product
 
 
@@ -162,11 +164,14 @@ class ProductCategoryUpdate(OnlySuperUserMixin, PageTitleMixin, UpdateView):
     pk_url_kwarg = 'category_pk'
 
     def form_valid(self, form):
-        # if 'discount' in form.cleaned_data:
-        #     discount = form.cleaned_data['discount']
-        #     if discount:
-        #         self.object.product_set.update(price=F('price') * (1 - discount / 100))
-            # db_profile_by_type(self.__class__, 'UPDATE', connection.queries)
+        if 'discount' in form.cleaned_data:
+            discount = form.cleaned_data['discount']
+            if discount:
+                # self.object.product_set.update(price=5000)
+                # self.object.product_set.update(is_active=False)
+                self.object.product_set.update(price=F('price') * (1 - discount / 100))
+                # db_profile_by_type(self.model, 'UPDATE', connection.queries)
+
         return super().form_valid(form)
 
 
