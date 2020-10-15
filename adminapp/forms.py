@@ -75,6 +75,8 @@ class AdminShopUserUpdateForm(UserChangeForm, CleanAgeMixin):
 
 
 class AdminProductCategoryCreateForm(FormControlMixin, forms.ModelForm):
+    discount = forms.FloatField(label='скидка', required=False, min_value=0, max_value=90, initial=0)
+
     class Meta:
         model = ProductCategory
         fields = '__all__'

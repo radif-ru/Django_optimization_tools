@@ -1,4 +1,6 @@
 from django.contrib.auth.decorators import login_required
+from django.db import connection
+from django.db.models import F
 from django.db.models.signals import pre_save, pre_delete
 from django.dispatch import receiver
 from django.http import HttpResponseRedirect, JsonResponse
@@ -17,7 +19,8 @@ def index(request):
     # basket_items = BasketItem.objects.filter(user=request.user)
     # basket_items = request.user.basketitem_set.all()
     # при добавлении related_name в модель .._set перестаёт работать, работает заданное имя:
-    basket_items = request.user.user_basket.select_related('product', 'product__category').all()  # подтягивает вместе с данными basket
+    basket_items = request.user.user_basket.select_related('product',
+                                                           'product__category').all()  # подтягивает вместе с данными basket
     # всё что по foreign key связано
     print('basket_items', basket_items.query)  # содержимое запроса
     context = {
@@ -44,11 +47,16 @@ def add(request, pk):
     # basket = request.user.basketitem_set.filter(product=pk).first()
 
     if not basket:
-        basket = BasketItem(user=request.user, product=product)
+        # basket = BasketItem.objects.create(user=request.user, product=product)  # not in db
+        basket = BasketItem(user=request.user, product=product, quantity=1)
 
-    basket.quantity += 1
+        # get basket.quantity -> python level -> update value -> python level -> db level
+        # basket.quantity += 1
+        # update value on db level
+    if basket.pk:
+        basket.quantity = F('quantity') + 1
     basket.save()
-
+    db_profile_by_type(basket, 'UPDATE', connection.queries)
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
@@ -116,3 +124,9 @@ def product_quantity_update_delete(sender, instance, **kwargs):
 
 # def product_quantity_err(request):
 #     return render(request, 'basketapp/product_quantity_err.html')
+
+
+def db_profile_by_type(instance, query_type, queries):
+    update_queries = list(filter(lambda x: query_type in x['sql'], queries))
+    print(f'db_profile {query_type} for {instance}:')
+    [print(query['sql']) for query in update_queries]
