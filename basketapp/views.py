@@ -101,13 +101,15 @@ def change(request, pk, quantity):
 def product_quantity_update_save(sender, update_fields, instance, **kwargs):
     print('pre_save', type(sender))
     if instance.pk:
+        # Здесь всё рушится, расчёты не верные из-за F объекта выше, соответсвнно перехват ошибки ниже ещё хуже ломает
         instance.product.quantity -= instance.quantity - sender.get_item(instance.pk).quantity
     else:
         instance.product.quantity -= instance.quantity
 
     # перехватывание ошибки при количестве товаров меньше 0:
-    if instance.product.quantity <= 0:
-        instance.product.quantity = 0
+    # print(instance.product.quantity)
+    # if instance.product.quantity <= 0:
+    #     instance.product.quantity = 0
         # Надо разобраться как отрендерить страницу с ошибкой, render, HttpResponseRedirect не работают:
         # return HttpResponseRedirect(reverse('basket:product_quantity_err'))
         # return render(request, template_name='basketapp/product_quantity_err.html')
