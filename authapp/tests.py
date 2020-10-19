@@ -22,7 +22,7 @@ class TestUserManagement(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTrue(response.context['user'].is_anonymous)
         self.assertEqual(response.context['page_title'], 'INTERIOR')
-        self.assertNotContains(response, 'Пользователь', status_code=200)
+        self.assertNotContains(response, 'пользователь', status_code=200)
         # self.assertNotIn('Пользователь', response.content.decode('utf-8'))
 
         # данные пользователя

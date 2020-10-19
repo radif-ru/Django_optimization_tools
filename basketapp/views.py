@@ -47,14 +47,16 @@ def add(request, pk):
     # basket = request.user.basketitem_set.filter(product=pk).first()
 
     if not basket:
-        # basket = BasketItem.objects.create(user=request.user, product=product)  # not in db
-        basket = BasketItem(user=request.user, product=product, quantity=1)
+        basket = BasketItem(user=request.user, product=product)
+        # # basket = BasketItem.objects.create(user=request.user, product=product)  # not in db
+        # Включить для работы с F объектом для избежания ошибок:
+        # basket = BasketItem(user=request.user, product=product, quantity=1)
 
-        # get basket.quantity -> python level -> update value -> python level -> db level
-        # basket.quantity += 1
-        # update value on db level
-    if basket.pk:
-        basket.quantity = F('quantity') + 1
+    # get basket.quantity -> python level -> update value -> python level -> db level
+    basket.quantity += 1
+    # update value on db level Для корректной работы доработать @receiver(pre_save...) внизу
+    # if basket.pk:
+    #     basket.quantity = F('quantity') + 1
     basket.save()
     db_profile_by_type(basket, 'UPDATE', connection.queries)
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
@@ -101,15 +103,14 @@ def change(request, pk, quantity):
 def product_quantity_update_save(sender, update_fields, instance, **kwargs):
     print('pre_save', type(sender))
     if instance.pk:
-        # Здесь всё рушится, расчёты не верные из-за F объекта выше, соответсвнно перехват ошибки ниже ещё хуже ломает
+        # Нужно доработать рачёты, если использовать F объект выше и перехват ошибки ниже - сравнение вызывает ошибку
         instance.product.quantity -= instance.quantity - sender.get_item(instance.pk).quantity
     else:
         instance.product.quantity -= instance.quantity
 
     # перехватывание ошибки при количестве товаров меньше 0:
-    # print(instance.product.quantity)
-    # if instance.product.quantity <= 0:
-    #     instance.product.quantity = 0
+    if instance.product.quantity <= 0:
+        instance.product.quantity = 0
         # Надо разобраться как отрендерить страницу с ошибкой, render, HttpResponseRedirect не работают:
         # return HttpResponseRedirect(reverse('basket:product_quantity_err'))
         # return render(request, template_name='basketapp/product_quantity_err.html')
