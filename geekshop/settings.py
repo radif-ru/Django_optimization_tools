@@ -136,11 +136,11 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': DATABASE.get('NAME', ''),
-        'USER': DATABASE.get('USER', ''),
-        'PASSWORD': DATABASE.get('PASSWORD', ''),
-        'HOST': 'localhost',
-        # 'PORT': '5432',
+        'NAME': DATABASE.get('NAME', 'geekshop'),
+        'USER': DATABASE.get('USER', 'radif'),
+        'PASSWORD': DATABASE.get('PASSWORD', 'qwertytrewq'),
+        'HOST': DATABASE.get('HOST', 'db'),
+        'PORT': '5432',
     }
 }
 
