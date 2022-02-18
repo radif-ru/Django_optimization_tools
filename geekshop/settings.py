@@ -115,7 +115,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'geekshop.wsgi.application'
 
-SECRETS_FILE = '/var/sec/geekshop__settings.json'
+SECRETS_FILE = './local__settings.json'
 EMAIL = {}
 SOCIAL_AUTH = {}
 DATABASE = {}
